@@ -50,7 +50,7 @@ body {
 .slider_parent{
 display: flex;
 justify-content: center;
-background-color: #03191f;
+background-color: #21121d;
 }
 .hamburger{
   display: none;
