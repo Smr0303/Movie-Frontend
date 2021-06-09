@@ -1,12 +1,14 @@
 body{
     margin: 0px;
 padding: 0px;
+background-color: rgb(243, 235, 224);
 }
 .sign-in{
     display: grid;
     grid-template-columns: 2fr 2fr;
 align-items: flex-end;
 margin-right: 8em;
+margin-top: 2em;
 }
 .entries{
     display: flex;
@@ -15,6 +17,7 @@ align-items: flex-end;
 margin-right: 8em;
 position: relative;
 bottom: 10em;
+align-content: center;
 }
 input{
    margin-top: 1em;
@@ -49,7 +52,35 @@ img{
     margin-right: auto;
     display: flex;
     align-items: flex-start;
-    margin-top: 10em;
+    margin-top: 6em;
     margin-left: auto;
 
+}
+.social_sites{
+    /* border : 2px solid red; */
+    display: flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items: center;
+    height: 107px;
+    margin-top: 3.4em;
+    position: absolute;
+    bottom: 0;
+}
+.social_sites img{
+width : 3%;
+margin-left: 2em;
+margin-right: 2em;
+display: flex;
+flex-direction: row;
+margin-top: auto;
+margin-bottom: auto;
+}
+.social_sites a{
+margin-left: 2em;
+margin-right: 2em;
+text-decoration: none;
+color: black;
+display: flex;
+flex-direction: row;
 }
