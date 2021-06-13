@@ -59,6 +59,7 @@ let search = document.querySelector(".search").children[0];
 // console.log(search)
 
 // search.placeholder = "hii"
+{
 let i=0,j=0;
 let str = ["Movies...","Shows...","Sports..."]
 setInterval(() => {
@@ -67,3 +68,4 @@ setInterval(() => {
     if(i==0)
     j= (j+1)%str.length;
 }, 200);
+}
