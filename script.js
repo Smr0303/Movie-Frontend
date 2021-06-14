@@ -2,6 +2,7 @@ const body=document.querySelector("body");
 window.addEventListener('load',()=>{
 body.classList.add("visible");
 });
+
 const slider = document.querySelector(".slider");
 const left_arrow = document.querySelector(".left_arrow");
 const right_arrow = document.querySelector(".right_arrow");
@@ -69,3 +70,40 @@ setInterval(() => {
     j= (j+1)%str.length;
 }, 200);
 }
+//now showing container
+
+const container=document.querySelector(".showing-container");
+const URL=`https://api.themoviedb.org/3/discover/movie?api_key=65bdc6e47dd2725b55a936c4b0242e7b&language=en-US&sort_by=popularity.desc`;
+fetch(URL).then((data)=>{
+    return data.text();
+}).then((res)=>{
+    const array=JSON.parse(res);
+    console.log(array);
+
+    array.forEach((ele)=>{
+
+        const imageUrl=`https://image.tmdb.org/t/p/w200/${ele.poster_path}`;
+        
+        const card=document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML=`<div class="card-motion">
+        <div class="card-front">
+          <img class="card-image" src="${imageUrl}" alt="" />
+          <div class="bottom-content">
+            <h4>${ele.title}</h4>
+        <span class="fa fa-star checked">${ele.vote_average}</span>
+        </div>
+        </div>
+        <div class="card-back">
+          <h2>Overview</h2><br>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi harum quod reiciendis tempora quam, quos magnam molestiae magni corporis dolorem necessitatibus, tenetur accusamus eum laborum optio est. Sit nihil repellat consequatur numquam atque velit! Expedita accusantium dolores corporis voluptates, dolorem fugit reiciendis accusamus dolorum nostrum quaerat sequi, aspernatur architecto.</p>
+        <button class="card-button">Book Now</button>
+        </div>
+        </div>`
+        container.appendChild(card);
+    })
+});
+
+
+
+
