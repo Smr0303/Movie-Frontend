@@ -80,7 +80,7 @@ fetch(URL).then((data)=>{
     const array=JSON.parse(res);
     console.log(array);
 
-    array.forEach((ele)=>{
+    array.results.forEach((ele)=>{
 
         const imageUrl=`https://image.tmdb.org/t/p/w200/${ele.poster_path}`;
         
