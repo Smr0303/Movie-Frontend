@@ -96,7 +96,7 @@ fetch(URL).then((data)=>{
         </div>
         <div class="card-back">
           <h2>Overview</h2><br>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi harum quod reiciendis tempora quam, quos magnam molestiae magni corporis dolorem necessitatibus, tenetur accusamus eum laborum optio est. Sit nihil repellat consequatur numquam atque velit! Expedita accusantium dolores corporis voluptates, dolorem fugit reiciendis accusamus dolorum nostrum quaerat sequi, aspernatur architecto.</p>
+          <p>${ele.overview}</p>
         <button class="card-button">Book Now</button>
         </div>
         </div>`
