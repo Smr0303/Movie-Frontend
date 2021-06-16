@@ -2,6 +2,7 @@ const body=document.querySelector("body");
 window.addEventListener('load',()=>{
 body.classList.add("visible");
 });
+
 const slider = document.querySelector(".slider");
 const left_arrow = document.querySelector(".left_arrow");
 const right_arrow = document.querySelector(".right_arrow");
