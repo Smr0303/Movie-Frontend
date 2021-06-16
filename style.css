@@ -6,7 +6,8 @@
 }
 body {
   min-height: 100vh;
-  background-color: #ffffff;
+  /* background-color: #24262b; */
+  background-color: #212839;
 }
 .navbar{
   width: 100%;
@@ -91,6 +92,7 @@ width: 100%;
 }
 .slider_parent{
   margin-top: 20px;
+  margin-bottom: 20px;
 display: flex;
 justify-content: center;
 /* background-color: rgb(255, 255, 255,0.2); */
@@ -188,13 +190,119 @@ left: 10px;
   margin: 0px 4px 0px 4px;
   background-color: white;
 }
+.streaming{
+  /* height: 500px; */
+  /* margin-top: 20px; */
+  /* border: 2px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #e0e0e0;
+}
+.card{
+  width: 240px;
+  /* border: 2px solid blue; */
+  margin: 10px;
+}
+.card-motion{
+  width: 100%;
+  /* border: 2px solid red; */
+  /* display: flex; */
+  position: relative;
+  box-sizing: border-box;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
 
+.movie_container{
+
+  width: 100%;
+/* height: 400px; */
+border: 2px solid #7e7e72;
+/* margin: 10px; */
+display: flex;
+flex-direction: column;
+background-color: #707b96;
+box-sizing: border-box;
+/* position: absolute; */
+/* top: 0px; */
+}
+.movie_container img{
+width: 100%;
+height: 360px;
+}
+.title{
+  background-color: #5d6579;
+  text-align: center;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  height: 40px;
+  /* align-items: center; */
+}
+.title h1{
+  font-family: 'Open Sans', sans-serif;
+  /* margin-left: 15px; */
+  font-size: 15px;
+}
+.rating{
+  /* width: 100%; */
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #707b96;
+}
+.rating h2{
+  /* margin-right: 10px; */
+  margin-left: 7px;
+}
+.rating img{
+  width: 15px;
+  height: 15px;
+}
+.card-back{
+  width: 100%;
+  /* border: 2px solid green; */
+  border: 2px solid #7e7e72;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  transform: rotateY(180deg);
+  background-color: blue;
+}
+.card:hover .card-motion{
+  transform: rotateY(180deg);
+}
+
+
+/* --------------------------------------------------------------------------------------------------- */
+::-webkit-scrollbar{
+  height: 10px;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  /* width: 10px; */
+  background: #504d4d; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  /* width: 10px; */
+  background:#a79b9b;
+}
 /* --------------------------------------------------------------------------------------------------- */
 @media (min-width: 0px) and (max-width: 1150px)
 {
 
   .slider_parent{
     margin-top: 0px;
+    margin-bottom: 0px;
   }
   .slider{
     border-top-left-radius: 0px;
@@ -277,4 +385,52 @@ left: 10px;
      margin-top: 6px;
      font-size: 10px;
   }
+}
+@media (min-width: 0px) and (max-width: 900px)
+{
+  .card{
+    width: 150px;
+    }
+  .movie_container img{
+    height: auto;
+    }
+    .rating h2{
+      font-size: 15px;
+    }
+    .rating img{
+      width: 10px;
+      height: 10px;
+    }
+
+}
+@media (min-width: 0px) and (max-width: 550px)
+{
+    .card{
+    width: 100px;
+    }
+    .rating img{
+      width: 10px;
+      height: 10px;
+    }
+    .title{
+      height: 20px;
+    }
+    .title h1{
+      font-size: 10px;
+    }
+}
+@media (min-width: 0px) and (max-width: 372px)
+{
+  .card{
+    width: 90px;
+    }
+    .title h1{
+      font-size: 8px;
+    }
+}
+@media (min-width: 0px) and (max-width: 342px)
+{
+  .card{
+    width: 40%;
+    }
 }
