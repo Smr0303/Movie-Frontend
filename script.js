@@ -1,15 +1,18 @@
+//Animations
 const body=document.querySelector("body");
 window.addEventListener('load',()=>{
 body.classList.add("visible");
 });
+
+
+
+//Main slider
 const slider = document.querySelector(".slider");
 const left_arrow = document.querySelector(".left_arrow");
 const right_arrow = document.querySelector(".right_arrow");
 const total_images = document.querySelector(".dots").children.length;
 let current = 0;
 // let slider_height;
-
-
 slider.children[0].style.display = "block";
 
 let myinterval;
@@ -70,6 +73,10 @@ setInterval(() => {
 }, 200);
 }
 
+
+
+//Fetching movies from API
+
 let streaming = document.querySelector(".streaming");
 
 fetch(`https://api.themoviedb.org/3/list/7099202?api_key=65bdc6e47dd2725b55a936c4b0242e7b&language=en-US`).then((res)=> {
@@ -94,6 +101,7 @@ fetch(`https://api.themoviedb.org/3/list/7099202?api_key=65bdc6e47dd2725b55a936c
 
     </div>
     <div class="card-back">
+    <h2>Overview</h2><br>
       <p>${data.items[i].overview}</p>
     </div>
   </div> `;
