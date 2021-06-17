@@ -203,6 +203,16 @@ left: 10px;
   width: 240px;
   /* border: 2px solid blue; */
   margin: 10px;
+  animation-name: show;
+  animation-duration: 2s;
+}
+@keyframes show{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
 .card-motion{
   width: 100%;
@@ -416,7 +426,7 @@ height: 360px;
       height: 20px;
     }
     .title h1{
-      font-size: 10px;
+      font-size: 7px;
     }
 }
 @media (min-width: 0px) and (max-width: 372px)
@@ -433,4 +443,13 @@ height: 360px;
   .card{
     width: 40%;
     }
+}
+@media (min-width: 0px) and (max-width: 1200px)
+{
+  .card:hover .card-motion{
+    transform: rotateY(0deg);
+  }
+  .card-back{
+    display: none;
+  }
 }

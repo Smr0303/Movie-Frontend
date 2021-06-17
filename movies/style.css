@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    /* height: 100vh; */
+    min-height: 100vh;
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.container
+{
+    width: 90%;
+    margin-top: 60px;
+    /* height: 100%; */
+    border: 2px solid #847a7a;
+    display: flex;
+}
+.movie_img{
+/* border: 2px solid green; */
+/* margin-left: 10px; */
+}
+.movie_img img{
+    width: 400px;
+}
+.movie_details{
+    border: 2px solid #847a7a;
+    padding: 20px;
+    box-sizing: border-box;
+    /* width: 30%; */
+}
+.heading{
+    display: flex;
+    align-items: center;
+}
+.heading img{
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+.heading h1{
+ color:  white;
+}
+.heading h2{
+ color:  #b8a9a9;
+ /* font-size: 19px; */
+}
+.overview{
+    margin-top: 10px;
+}
+.overview p{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+.trailer{
+    border: 2px solid #847a7a;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.trailer_vid{
+    /* width: 300px;
+    height: 200px; */
+}
+
+
+
+
+.scroll_container{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow-x: scroll;
+    /* overflow-y: scroll; */
+    /* height: 400px; */
+    width: 1200px;
+    background-color: rgb(173,173,173,0.6);
+    box-shadow:  30px 0px 30px #6f6a6a;
+    /* box-shadow:  -30px 0px 30px grey; */
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    /* background-color: white; */
+}
+
+.box{
+    min-width:200px;
+    width: 200px;
+    border: 2px solid #565656;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #d8d8d8;
+}
+
+.box img{
+    width: 100%;
+    /* width: 100px; */
+    /* height: 400px; */
+}
+/* .cast_name{
+    border: 2px solid red;
+} */
+.cast_name h1{
+    font-size: 15px;
+    text-align: center;
+}
+/* .cast_character{
+    border: 2px solid red;
+} */
+.cast_character h1{
+    text-align: center;
+    font-size: 12px;
+}
+
+.scroll_container::-webkit-scrollbar{
+    height: 10px;
+    width: 0px;
+}
+.scroll_container::-webkit-scrollbar-thumb {
+    /* width: 10px; */
+    background:#8f8f8f; 
+    border-radius: 10px;
+  }
+.scroll_container::-webkit-scrollbar-thumb:hover {
+    /* width: 10px; */
+    background:#a79b9b;
+  }
