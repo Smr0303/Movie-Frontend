@@ -37,9 +37,10 @@ body {
 }
 .logo .image{
 width: 100%;
- 
+ border-radius: 20px;
  }
 .head {
+  margin-left: 8px;
   display:flex;
   justify-content: center;
   align-items: center;
