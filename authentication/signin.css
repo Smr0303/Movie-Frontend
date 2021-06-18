@@ -1,86 +1,96 @@
-body{
-    margin: 0px;
-padding: 0px;
-background-color: rgb(243, 235, 224);
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+*{
+    margin:0;
+    padding:0;
 }
-.sign-in{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-align-items: flex-end;
-margin-right: 8em;
-margin-top: 2em;
-}
-.entries{
+main{
     display: flex;
-    flex-direction: column;
-align-items: flex-end;
-margin-right: 8em;
-position: relative;
-bottom: 10em;
-align-content: center;
-}
-input{
-   margin-top: 1em;
-   margin-bottom: 2em;
-   padding: 0.8em;
-   border-radius: 5px;
-}
-input,button{
-    width: 30vh;
-}
-h2{
 
-    font-family: 'Open Sans', sans-serif;
-    margin-right: 90px;
-    margin-top: 5em;
 }
-
-button{
-    padding: 0.8em;
-    max-width: inherit;
-    background-color: lightcoral;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-button:hover{
-    cursor: pointer;
-    box-shadow: 4px 4px rgb(219, 181, 181);
-}
-img{
-    width: 20em;
-    position: relative;
-    margin-right: auto;
+.content{
     display: flex;
     align-items: flex-start;
-    margin-top: 6em;
-    margin-left: auto;
+    flex-direction:row;
+    background-color: rgb(31, 37, 51);
+    height:100vh;
+    width:60vw;
+}
+.sign-in{
+    background: rgb(255, 255, 255);
+    width:40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5em 0em 2em 0em;
+}
+.sign-in-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    font-family: 'Passion One', cursive;
+    font-size: 40px;
+    margin-bottom:1em;
+    font-weight: 200;
 
 }
-.social_sites{
-    /* border : 2px solid red; */
+.input, .button{
+    width:30vw;
+    height:5vh;
+    margin:1em 0em 2em 0em;
+    border-radius: 5px;
+}
+.button{
+    background: coral;
+    height:7vh;
+    width:14vw;
+}
+.bottom{
+    display:flex;
+}
+.bottom a{
+text-decoration: none;
+color:black;
+margin:0em 2em 0em 2em;
+}
+.website_name{
+    display:flex;
+    color: #c9c1f0;
+    margin-left: 14px;
+  }
+  .logo{
+    /* border: 2px solid green; */
+    width: 40px;
     display: flex;
-    flex-direction : row;
+    align-items: center;
+  }
+  .logo .image{
+  width: 100%;
+   
+   }
+  .head {
+    display:flex;
     justify-content: center;
     align-items: center;
-    height: 107px;
-    margin-top: 3.4em;
-    position: absolute;
-    bottom: 0;
-}
-.social_sites img{
-width : 3%;
-margin-left: 2em;
-margin-right: 2em;
-display: flex;
-flex-direction: row;
-margin-top: auto;
-margin-bottom: auto;
-}
-.social_sites a{
-margin-left: 2em;
-margin-right: 2em;
-text-decoration: none;
-color: black;
-display: flex;
-flex-direction: row;
-}
+  }
+   .head h2{
+    /* right:0px; */
+    font-family: 'Passion One', cursive;
+    /* margin-top: 0px; */
+    font-size: 40px;
+    color:rgb(252, 107, 23);
+    margin-left: 4px;
+  }
+   .head h1{
+     margin-left: 2px;
+     font-family: 'Passion One', cursive;
+     margin-top: 9px;
+     color: #f3c13b;
+     font-size: 23px;
+  }
+  .popcorn{
+      width:10vw;
+  }
+  
