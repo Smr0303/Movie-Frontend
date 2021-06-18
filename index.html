@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="left">
-        <div class="website_name">
-          <span class="logo">
-            <img class="image" src="./assets/logo.png" />
-          </span>
-          <div class="head">
-            <h2>KINO</h2>
-            <h1>tickets.com</h1>
-          </div>
-        </div>
-        <div class="search">
-            <input type="text" placeholder="Search" />
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="left">
+      <div class="website_name">
+        <span class="logo">
+          <img class="image" src="./assets/logo.png" />
+        </span>
+        <div class="head">
+          <h2>KINO</h2>
+          <h1>tickets.com</h1>
         </div>
       </div>
-      <div class="right">
-        <a href="#">Movies</a>
-        <a href="#">Theaters</a>
-        <a href="#">News</a>
-        <a href="#">SignIn </a>
-      </div>
-       <div class="hamburger">
-         <img src="../assets/hamburger.png" alt="">
-       </div>
-     </div>
-    <div class="slider_parent">
+      <div class="search">
+        <input type="text" placeholder="Search" />
 
-      <div class="slider">
+      </div>
+    </div>
+    <div class="right">
+      <a href="#">Movies</a>
+      <a href="#">Theaters</a>
+      <a href="#">News</a>
+      <a href="#">SignIn </a>
+    </div>
+    <div class="hamburger">
+      <img src="../assets/hamburger.png" alt="">
+    </div>
+  </div>
+  <div class="slider_parent">
+
+    <div class="slider">
       <div class="slider_img">
-          <img src="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422" alt="">
+        <img
+          src="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422"
+          alt="">
       </div>
       <div class="slider_img">
-          <img src="https://webneel.net/file/images/11-16/8-xmen-movie-poster-design.jpg" alt="">
+        <img src="https://webneel.net/file/images/11-16/8-xmen-movie-poster-design.jpg" alt="">
       </div>
       <div class="slider_img">
-          <img src="https://qrius.com/wp-content/uploads/2014/03/Highway-Movie-Poster.jpg" alt="">
+        <img src="https://qrius.com/wp-content/uploads/2014/03/Highway-Movie-Poster.jpg" alt="">
       </div>
       <div class="right_arrow" onclick="show_arrow(1)">
-          <img src="../assets/right_arrow.png" alt="">
+        <img src="assets/right_arrow.png" alt="">
       </div>
       <div class="left_arrow" onclick="show_arrow(-1)">
-          <img src="../assets/left_arrow.png" alt="">
+        <img src="assets/left_arrow.png" alt="">
       </div>
       <div class="dot_container">
-      <div class="dots">
+        <div class="dots">
           <div onclick="show_dot(0)"></div>
           <div onclick="show_dot(1)"></div>
           <div onclick="show_dot(2)"></div>
+        </div>
       </div>
-      </div>
+    </div>
   </div>
-  </div>
-<div class="after_slider">
-  <div class="streaming">
-<!-- -------------------------------------------------------------------------------------------- -->
-<!-- <div class="card">
+  <div class="after_slider">
+    <div class="showing">Now showing</div>
+    <div class="streaming">
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <!-- <div class="card">
 <div class="card-motion">
    <div class="movie_container">
        <img src="https://image.tmdb.org/t/p/w200/rTh4K5uw9HypmpGslcKd4QfHl93.jpg" alt="">
@@ -93,9 +94,45 @@
     </div>
   </div> 
 </div>    -->
-<!-- ----------------------------------------------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------------------------------------- -->
+    </div>
+  </div>
+
+  <!-- footer -->
+<div class="footer">
+  <!-- <div class="upcoming-movies">
+    Upcoming Movies
+
+  </div> -->
+
+  <div class="movies-by-lang">
+    Movies by Language
+  </div>
+
+  <div class="movie-reviews">
+     Movie Reviews
+  </div>
+
+  <div class="logo1">
+    <img src="assets/logo 2.png" class="image">
+  </div>
+
+  <div class="social_sites">
+    <div class="social-media">
+    <img src="assets/fb_iconb:w.png" alt="">
+    <img src="assets/insta_iconb:w.png" alt="">
+    <img src="assets/twitter_iconb:w.png" alt="">
+  </div>
+  <div class="contact">
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Feedback</a>
   </div>
 </div>
+
+</div>
+
   <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
