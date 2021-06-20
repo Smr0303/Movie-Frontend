@@ -2,29 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signup.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./signup.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <title>Document</title>
 </head>
 
 <body>
-    <main>
-        <div class="sign-up">
-            <div class="form">
-                <form class ="sign-up-form">
-                    <h2>Sign Up</h2>
-                    <input type="text" class="signUp-name" placeholder="Enter your Name">
-                    <input type="email" class="signUp-email" placeholder="Enter your email">
-                    <input type="password" class="signUp-password" placeholder="Enter password">
-                    <input type="password" class="signUp-repassword" placeholder="Confirm password">
-                    <button type="submit" class="button">Get Started</button>
-</form>
-            </div>
+  <main>
+    <div class="content">
+      <div class="website_name">
+        <span class="logo">
+          <img class="image" src="../assets/logo 2.png" />
+        </span>
+        <div class="head">
+          <h2>KINO</h2>
+          <h1>tickets.com</h1>
         </div>
-    </main>
+      </div>
+      <div class="welcome">
+        <div class="quote">
+          <p>Enter your personal info to stay connected with us.</p><br>
+        </div>
+        <div class="text">
+          <p>Already registered?<p><a href="./signin.html" class="register">Login here</a></p></p>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="sign-in">
+      <div class="form">
+        <form class="sign-in-form">
+          <h2 class="heading">Welcome Back!</h2>
+          <h3 class="login">Register</h3>
+          <input class="input-name" type="text" placeholder="Name" />
+          <input class="input-email" type="text" placeholder="Enter email" />
+          <input class="input-password" type="password" placeholder="Enter password" /> 
+          <!-- <input class="input-number" type="number" placeholder="Mobile Number" /> -->
+          <button class="button" type="submit">Sign-up</button>
+        </form>
+      </div>
+      <div class="bottom">
+        <!-- <a href=""><h4>New User?Create account</h4></a> -->
+        <a href="">
+          <h4>Forgot password?</h4>
+        </a>
+      </div>
+    </div>
+  </main>
 </body>
 
-<script src="./signup.js"></script>
 </html>
