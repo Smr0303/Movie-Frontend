@@ -35,19 +35,19 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 7em;
 }
-.heading{
+/* .heading{
     font-family: 'Passion One', cursive;
     font-size: 40px;
     margin-bottom:1em;
     font-weight: 200;
    color: rgb(31, 37, 51);
-}
+} */
 .login{
  font-size: 30px;
  margin-bottom: 1em;
  border-bottom: 5px solid coral;
- text-align: left;
  color: wheat;
 }
 input{
@@ -67,6 +67,7 @@ input, .button{
 }
 .button:hover{
     box-shadow: 5px 5px rgb(238, 162, 112);
+    cursor: pointer;
 }
 .bottom{
     display:flex;
