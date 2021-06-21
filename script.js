@@ -95,7 +95,9 @@ fetch(`https://api.themoviedb.org/3/list/7099202?api_key=65bdc6e47dd2725b55a936c
 
     </div>
     <div class="card-back">
+    <h2 class="overview">Overview</h2>
       <p>${data.items[i].overview}</p>
+      <button class="book">Book Now</button>
     </div>
   </div> `;
         streaming.appendChild(card)

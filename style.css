@@ -205,7 +205,7 @@ left: 10px;
   justify-content: space-evenly;
   position: absolute;
   /*width: 100%; */
-  background-color: #e0e0e0;
+  background-color: #ffffff;
 }
 .card{
   width: 240px;
@@ -247,7 +247,7 @@ left: 10px;
   /* background-color: rgba(255,255,255,0.8); */
   font-family: 'Permanent Marker', cursive;
   text-align: center;
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 .movie_container{
@@ -264,7 +264,8 @@ background-color: #707b96;
 box-sizing: border-box;
 /* margin-top: 5em; */
 /* left: 0; */
-
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
  /* position: absolute;  */
  /*top: 10px; */
 }
@@ -273,7 +274,7 @@ width: 100%;
 height: 360px;
 }
 .title{
-  background-color: #5d6579;
+  background-color: rgb(31, 37, 51);
   text-align: center;
   /* padding-top: 10px;
   padding-bottom: 10px; */
@@ -284,6 +285,7 @@ height: 360px;
   /* text-align: center; */
   height: 40px;
   /* align-items: center; */
+color: wheat;
 }
 .title h1{
   font-family: 'Open Sans', sans-serif;
@@ -297,7 +299,8 @@ height: 360px;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: #707b96;
+  background-color: rgba(255, 127, 80,0.8);
+  color: rgb(31, 37, 51);
 }
 .rating h2{
   /* margin-right: 10px; */
@@ -317,7 +320,40 @@ height: 360px;
   height: 100%;
   transform: rotateY(180deg);
   background-color: #212839;
-  color: #e0e0e0;
+  color: wheat;
+  font-size: 14px;
+  -webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+/* align-items: center; */
+}
+.card-back p{
+  text-align: center;
+  overflow: auto;
+  font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+}
+.overview{
+  width: fit-content;
+  color: wheat;
+  border-bottom: 3px solid coral;
+  margin-bottom: 15px;
+  line-break: loose;
+  position: relative;
+  left: 3.3em;
+  font-family: 'Open Sans', sans-serif;
+}
+.book{
+  position: absolute;
+  bottom: 0;
+  left: 6em;
+  margin-bottom: 10px;
+  width: 7em;
+  height: 3em;
+  background-color: coral;
+  border-radius: 7px;
+}
+.book:hover{
+  cursor: pointer;
 }
 .card:hover .card-motion{
   transform: rotateY(180deg);
