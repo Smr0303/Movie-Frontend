@@ -95,9 +95,7 @@ fetch(`https://api.themoviedb.org/3/list/7099202?api_key=65bdc6e47dd2725b55a936c
 
     </div>
     <div class="card-back">
-    <h2 class="overview">Overview</h2>
       <p>${data.items[i].overview}</p>
-      <button class="book">Book Now</button>
     </div>
   </div> `;
         streaming.appendChild(card)
@@ -113,7 +111,6 @@ function show_movie(id)
     location.href = `./movies/index.html?id=${id}`
     // }
 }
-
 
 // fetch(`https://api.themoviedb.org/3/discover/movie?api_key=65bdc6e47dd2725b55a936c4b0242e7b&language=en-US&sort_by=popularity.desc`).then((res)=> {
 //     return res.json()

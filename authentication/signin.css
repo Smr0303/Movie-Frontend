@@ -15,7 +15,6 @@ main{
     background-color: rgb(31, 37, 51);
     height:100vh;
     width:60vw;
-    position: relative;
 }
 .sign-in{
     background: rgb(255, 255, 255);
@@ -35,20 +34,10 @@ main{
     font-size: 40px;
     margin-bottom:1em;
     font-weight: 200;
-   color: rgb(31, 37, 51);
+
 }
-.login{
- font-size: 30px;
- margin-bottom: 1em;
- border-bottom: 5px solid coral;
- text-align: left;
- 
-}
-input{
-    padding: 5px 5px 5px 20px;
-}
-input, .button{
-    width:25vw;
+.input, .button{
+    width:30vw;
     height:5vh;
     margin:1em 0em 2em 0em;
     border-radius: 5px;
@@ -57,17 +46,13 @@ input, .button{
     background: coral;
     height:7vh;
     width:14vw;
-    font-size: 20px;
-}
-.button:hover{
-    box-shadow: 5px 5px rgb(238, 162, 112);
 }
 .bottom{
     display:flex;
 }
 .bottom a{
 text-decoration: none;
-color:rgb(31, 37, 51);
+color:black;
 margin:0em 2em 0em 2em;
 }
 .website_name{
@@ -83,15 +68,12 @@ margin:0em 2em 0em 2em;
   }
   .logo .image{
   width: 100%;
-   border-radius: 20px;
-   margin-top: 5px;
+   
    }
   .head {
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-left: 7px;
-    margin-top: 7px;
   }
    .head h2{
     /* right:0px; */
@@ -108,54 +90,7 @@ margin:0em 2em 0em 2em;
      color: #f3c13b;
      font-size: 23px;
   }
-  /* .popcorn{
+  .popcorn{
       width:10vw;
-  } */
-
-  .welcome{
-      color: wheat;
-      /* text-align: center; */
-      display: flex;
-      flex-direction: column;
-      margin-top: 17em;
-      position: absolute;
-      justify-content: center;
-      align-items: center;
   }
-  .text p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  .quote{
-    font-family: 'Passion One', cursive;
-    font-size: 50px;
-    text-align: center;
-    font-style: oblique;
-    /* position: relative;
-    right: 3em; */
-  }
-  .register{
-      text-decoration: none;
-      color: wheat;
-      /* position: absolute;
-      left: 3em; */
-      font-weight: bold;
-  }
-
-  @media (min-width:0px) and (max-width: 481px){
-      .quote{
-          font-size: 30px;
-      }
-      .heading{
-          font-size: 20px;
-      }
-      input{
-          width: 23vw;
-      }
-      .button{
-          width: fit-content;
-      }
-  }
+  

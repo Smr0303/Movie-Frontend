@@ -1,0 +1,225 @@
+*{
+    margin : 0px;
+    padding : 0px
+}
+body{
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    /* flex-direction: column; */
+    background-color: #131a1f;
+}
+.container{
+    margin-top: 60px;
+    /* width: 90%; */
+    border: 2px solid #6d6d73;
+    /* height: 500px; */
+    display: flex;
+    /* flex-direction: column; */
+}
+.movie_image{
+    /* border: 2px solid green; */
+    width: 400px;
+}
+.extra{
+    /* border: 2px solid blue; */
+    display: none;
+    width: 100%;
+}
+.movie_image img{
+    width: 100%;
+    /* height: 100%; */
+}
+.title_and_slot{
+    width: 600px;
+    border-left: 2px solid #6d6d73;
+    /* position: relative; */
+    /* background-color: black; */
+    /* background-color: #292b2e; */
+    /* flex-direction: column; */
+}
+.title{
+    /* height: 50px; */
+    padding: 10px;
+    border-bottom: 2px solid #6d6d73;
+    /* border: 2px solid #6d6d73; */
+    text-align: center;
+
+}
+.title h1{
+    color: white;
+    /* font-size: 23px; */
+}
+.slot{
+    /* border: 2px solid green; */
+    /* height: 400px; */
+}
+.date{
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.date input{
+    background-color: #c4c4d3;
+    height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.slot_container{
+    /* border: 2px solid yellow; */
+    /* display: flex; */
+    padding: 20px;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    display: none;
+    border-bottom: 2px solid #7a7a7a;
+}
+.slot_holder{
+    /* border: 2px solid brown; */
+    display: flex;
+    /* padding: 20px; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box{
+    /* color: #a8a8a8; */
+    color: #f1eeee;
+    /* border: 2px solid #7a7a7a; */
+    border: 2px solid #8ba28c;
+    /* border: 2px solid rgb(124, 136, 124); */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.box:hover{
+    cursor: pointer;
+}
+.missed_show{
+    border: 2px solid #7a7a7a;
+    color: #a8a8a8;
+}
+.no_slots{
+    /* border: 2px solid yellow; */
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    display: none;
+}
+.near_dates{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    /* position: absolute; */
+    bottom: 0px;
+    justify-content: center;
+    /* width: 100%; */
+    border-bottom: 2px solid #7a7a7a;
+}
+.child_date{
+    border: 2px solid green;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+.child_date:hover{
+cursor: pointer;
+}
+.not_available{
+    border: 2px solid #ae0404;
+}
+.book_now{
+    /* border: 2px solid blue; */
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+.book_button{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #727579;
+
+}
+.active{
+    background-color: #cfdbec;
+}
+.selected{
+    background-color: blue;
+}
+
+
+
+@media (min-width: 0px) and (max-width: 1100px)
+{
+    .movie_image{
+        /* border: 2px solid green; */
+        width: 30vw;
+        /* height: 40vw; */
+    }
+}
+@media (min-width: 0px) and (max-width: 950px)
+{
+  .container{
+      flex-direction: column;
+  }
+  .movie_image{
+    /* border: 2px solid green; */
+    width: 100%;
+    /* border: 2px solid red; */
+    border-bottom: 2px solid #6d6d73;
+    display: flex;
+    background-color: #6e6e6e;
+    /* height: 40vw; */
+}
+.movie_image img{
+    width: 150px;
+    /* height: 100%; */
+}
+.title_and_slot{
+    border-left: none;
+}
+.extra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+@media (min-width: 0px) and (max-width: 700px)
+{
+
+    .title_and_slot{
+        width: 90vw;
+    }
+    .child_date{
+        padding: 10px;
+        margin: 10px;
+        font-size: 13px;
+    }
+    .near_dates{
+        padding: 5px;
+    }
+    .box{
+        font-size: 13px;
+    }
+
+}
+@media (min-width: 0px) and (max-width: 350px)
+{
+    .box{
+        font-size: 11px;
+    }
+}
+@media (min-width: 0px) and (max-width: 410px)
+{
+    .extra img{
+        width: 30vw;
+    }
+}
