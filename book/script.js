@@ -61,7 +61,7 @@ obj = {
     slot : slot,
     date : date
 }
-fetch(`${url}/show_seats`,{
+fetch(`${url}/slots/show_seats`,{
     method : "POST",
     body: JSON.stringify(obj),
     headers : {
