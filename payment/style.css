@@ -1,0 +1,107 @@
+*{
+    margin : 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131a1f;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+.loading_image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    display: none;
+    z-index: 5;
+}
+.another_container::before{
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.another_container{
+    position: relative;
+    height: 100%;
+    /* background-color: black; */
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.another_container img{
+    /* opacity: 1; */
+    width: 80px;
+}
+/* ------------------------------------------------------------------------------------------------ */
+
+.container{
+    margin-top: 70px;
+    /* width: 800px; */
+    /* height: 500px; */
+    border: 2px solid #6d6d73;
+    display: flex;
+}
+.movie_image{
+    display: flex;
+    border-right: 2px solid #6d6d73;
+}
+.movie_image img{
+    width: 380px;
+}
+.details_and_payment{
+    width: 400px;
+    /* border: 2px solid yellow; */
+}
+.details{
+    /* border: 2px solid green; */
+    border-bottom: 2px solid #6d6d73;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.details ul li{
+    list-style: none;
+    color: white;
+    margin: 5px;
+}
+.payment{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 10px;
+    /* border: 2px solid blue; */
+    border-bottom: 2px solid #6d6d73;
+    /* height: 100%; */
+}
+.payment input{
+    color: white;
+}
+#razor_label{
+    color: white;
+}
+#razor_image img{
+    width: 200px;
+    margin-top: 10px;
+}
+#rzp-button1{
+
+    width: 200px;
+    height: 30px;
+    background-color: #c2d8f3;
+    border-radius: 5px;
+    /* margin-top: 10px; */
+}
+.pay_button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

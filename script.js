@@ -1,3 +1,4 @@
+const url = 'http://localhost:3000';
 const body=document.querySelector("body");
 window.addEventListener('load',()=>{
 body.classList.add("visible");
@@ -8,6 +9,25 @@ const right_arrow = document.querySelector(".right_arrow");
 const total_images = document.querySelector(".dots").children.length;
 let current = 0;
 // let slider_height;
+
+const token = localStorage.getItem("jwt");
+if (token) {
+    fetch(`${url}/verify_login`, {
+      method: "GET",
+      headers: {
+        authorization: token,
+      },
+    }).then((res) => {
+        console.log(res)
+        if(res.status == 200)
+        {
+            let signin = document.getElementById("signin_link");
+            let user_logo = document.getElementById("user_logo");
+            signin.style.display = "none";
+            user_logo.style.display = "block";
+        }
+    })
+}
 
 
 slider.children[0].style.display = "block";
@@ -75,7 +95,7 @@ let streaming = document.querySelector(".streaming");
 fetch(`https://api.themoviedb.org/3/list/7099202?api_key=65bdc6e47dd2725b55a936c4b0242e7b&language=en-US`).then((res)=> {
     return res.json()
 }).then((data) => {
-    console.log(data)
+    // console.log(data)
     for(var i=0;i<data.items.length;i++)
     {
         let card = document.createElement("div");

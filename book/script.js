@@ -3,28 +3,17 @@ const urlParams = new URLSearchParams(window.location.search);
 let id = urlParams.get("id");
 let slot = urlParams.get("slot");
 let date = urlParams.get("date");
+
+let just_display_date = "";
+let seat_array = [];
 // let id = 337404;
 // let slot = "slot1";
 // let date = "2021-06-22";
 let time = "";
 const url = 'http://localhost:3000';
-
-if(slot == "slot1")
-time = "9:00am - 11:00am";
-else if(slot == "slot2")
-time = "11:30am - 1:30pm";
-else if(slot == "slot3")
-time = "2:00pm - 4:00pm";
-else if(slot == "slot4")
-time = "4:30pm - 6:30pm";
-else if(slot == "slot5")
-time = "7:00pm - 9:00pm";
-else if(slot == "slot6")
-time = "9:30pm - 11:30pm"
-else if(slot == "slot7")
-time = "11:50pm - 2:00am";
-
-
+slot_to_time(slot);
+check_valid(date,slot);
+date_converter(date);
 let body = document.querySelector("body");
 let movie_details = document.createElement("div");
 // let super_container = document.createElement("div");
@@ -46,11 +35,14 @@ movie_details.innerHTML = `
             </div>
             <div class="show_details">
                 <ul>
-                    <li>Date : ${date}</li>
+                    <li>Date : ${just_display_date}</li>
                     <li>Time : ${time}</li>
                     <li>Venue : KinoTheatre</li>
                 </ul>
             </div>
+        <div class="payment_button">
+            <button class = "pay_but">Proceed To Pay</button>
+        </div>
         </div>`;
         // movie_details.style.display = "flex";
 })
@@ -141,10 +133,48 @@ fetch(`${url}/slots/show_seats`,{
     body.appendChild(container)
     body.appendChild(movie_details)
     // body.appendChild(super_container)
+    let proceed_to_pay = document.querySelector(".payment_button").children[0];
+// console.log(proceed_to_pay)
+proceed_to_pay.addEventListener("click",() => {
+
+    if(seat_array.length!=0)
+    {
+    let loading_image = document.querySelector(".loading_image");
+    loading_image.style.display = "block";
+    window.scrollTo(0,0);
+    console.log(seat_array);
+
+    obj = {
+        movie_id : id,
+        slot : slot,
+        date : date,
+        seats : seat_array
+    }
+    fetch(`${url}/booking/block`,{
+        method : "POST",
+        body: JSON.stringify(obj),
+        headers : {
+             "Content-Type" : "application/json"
+        }
+    }).then((res) => {
+        return res.json()
+    }).then((data) => {
+        //  console.log(data)
+         location.href = `../payment/index.html?id=${data.order_id}`
+    })
+}
+// else
+// {
+//     let loading_image = document.querySelector(".loading_image");
+//     loading_image.style.display = "block";
+//     window.scrollTo(0,0);
+// }
 })
-let seat_array = [];
+})
+
 function select_seat(id)
 {
+
     // console.log(id);
     let seat = document.getElementById(`${id}`);
     // console.log(seat)
@@ -162,7 +192,79 @@ function select_seat(id)
     seat.classList.add("selected")
     seat_array.push(id);
     }
+    let button = document.querySelector(".payment_button").children[0];
+    // console.log(button)
+    if(seat_array.length == 0)
+    button.classList.remove("active");
+    else
+    button.classList.add("active");
+
     // seat_string = seat_string.slice(0,seat_string.lastIndexOf('or')-1);
-    console.log(seat_array);
+    // console.log(seat_array);
+
+    // console.log(total);
     // console.log(seat_string.lastIndexOf('or'));
+}
+function slot_to_time(x)
+{
+    // console.log(x)
+    if(x == "slot1")
+    time = "9:00am - 11:00am";
+    else if(x == "slot2")
+    time = "11:30am - 1:30pm";
+    else if(x == "slot3")
+    time = "2:00pm - 4:00pm";
+    else if(x == "slot4")
+    time = "4:30pm - 6:30pm";
+    else if(x == "slot5")
+    time = "7:00pm - 9:00pm";
+    else if(x == "slot6")
+    time = "9:30pm - 11:30pm"
+    else if(x == "slot7")
+    time = "11:50pm - 2:00am";
+}
+function check_valid(x,y)
+{
+    let date = new Date;
+    let minutes = date.getHours()*60 + date.getMinutes();
+    let dd = date.getDate();
+    let mm = date.getMonth()+1;
+    let yyyy = date.getFullYear();
+    if(dd<10)
+    {
+    dd = `0${dd}`
+    }
+    if(mm<10)
+    {
+    mm = `0${mm}`
+    }
+    date = `${yyyy}-${mm}-${dd}`
+
+    if(date==x)
+    {
+        // console.log("hii bro")
+       if(y=='slot1' && minutes+20>540)
+       location.href = `../index.html`;
+       else if(y=='slot2' && minutes+20>690)
+       location.href = `../index.html`;
+       else if(y=='slot3' && minutes+20>840)
+       location.href = `../index.html`;
+       else if(y=='slot4' && minutes+20>990)
+       location.href = `../index.html`;
+       else if(y=='slot5' && minutes+20>1140)
+       location.href = `../index.html`;
+       else if(y=='slot6' && minutes+20>1290)
+       location.href = `../index.html`;
+       else if(y=='slot7' && minutes+20>1430)
+       location.href = `../index.html`;
+    }
+    // console.log(date);
+}
+function date_converter(x)
+{
+    // console.log(x)
+    let yyyy = x.slice(0,4);
+    let mm = x.slice(5,7);
+    let dd = x.slice(8,10);
+    just_display_date = `${dd}-${mm}-${yyyy}`;
 }

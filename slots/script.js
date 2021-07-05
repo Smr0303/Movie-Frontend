@@ -4,7 +4,7 @@ const id = urlParams.get("id");
 
 // let input = document.querySelector(".date").children[0]
 // const id = 337404;
-const url = 'http://localhost:3000';
+const url = 'http://localhost:3000/slots';
 let date = new Date;
 // let x = date.;
 let current_min = date.getHours()*60 + date.getMinutes();
@@ -29,6 +29,9 @@ input.addEventListener("change", () => {
 })
 function change_date(x)
 {
+    let button = document.querySelector(".book_now").children[0];
+    button.classList.remove("active");
+    status = 0;
     input.value = x;
     date = input.value;
     show_slot();
@@ -102,7 +105,7 @@ https://api.themoviedb.org/3/movie/${id}?api_key=65bdc6e47dd2725b55a936c4b0242e7
 obj2 = {
     movie_id : id
 }
-fetch(`${url}/slots/show_available`,{
+fetch(`${url}/show_available`,{
     method : "POST",
     body: JSON.stringify(obj2),
     headers : {
@@ -179,7 +182,7 @@ obj = {
     date : date,
     movie_id : id
 }
-fetch(`${url}/slots/show_slots`,{
+fetch(`${url}/show_slots`,{
     method : "POST",
     body: JSON.stringify(obj),
     headers : {

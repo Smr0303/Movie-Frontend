@@ -1,0 +1,80 @@
+*{
+    margin : 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131a1f;
+}
+.ticket_container{
+    /* width: 800px; */
+    /* height: 500px; */
+    border: 2px solid red;
+    margin-top: 70px;
+    display: flex;
+    border: 2px solid #6d6d73;
+    /* background-color: blue; */
+}
+.movie_image{
+display: flex;
+border-right:  2px solid #6d6d73;
+}
+.movie_image img{
+    width: 350px;
+}
+.details_and_status{
+    width: 400px;
+    /* border: 2px solid green; */
+}
+.status{
+    border-bottom: 2px solid #6d6d73;
+    display: flex;
+    justify-content: flex-end;
+}
+.booked_image{
+    width: 200px;
+    transform: translateX(25px);
+    transform: rotateZ(8deg);
+    /* filter: invert(1); */
+    filter: hue-rotate(150deg) brightness(100);
+    /* filter: brightness(100); */
+    display: none;
+}
+.failed_image{
+    width: 120px;
+    transform: rotateZ(9deg);
+    margin-right: 18px;
+    /* opacity: 0.9; */
+    filter: brightness(0.9);
+    display: none;
+}
+.details{
+    /* padding: 20px; */
+}
+.order_details{
+    padding: 20px;
+    border-bottom: 2px solid #6d6d73;
+}
+.details ul li{
+    list-style: none;
+    color: white;
+    margin-top: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+.qr{
+    padding: 30px;
+    display: flex;
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+    /* border: 2px solid red; */
+}
+.print_button{
+    height: 35px;
+    width: 100px;
+    margin-top: 30px;
+    background-color: #c1f2fa;
+}

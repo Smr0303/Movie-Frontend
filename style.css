@@ -109,6 +109,16 @@ justify-content: center;
   width: 30px;
   height: 30px;
 }
+/* #signin_link{
+  
+} */
+#user_logo{
+  display: none;
+}
+#user_logo_img{
+  margin-top: 5px;
+  width: 33px;
+}
 .slider{
   /* height: 400px; */
   width: 1100px;
@@ -205,6 +215,7 @@ left: 10px;
   flex-wrap: wrap;
   justify-content: center;
   background-color: #e0e0e0;
+  padding-bottom: 30px;
 }
 .card{
   width: 240px;
@@ -298,7 +309,10 @@ height: 360px;
   transform: rotateY(180deg);
 }
 
-
+.footer{
+  height: 350px;
+  background-color: #212839;
+}
 /* --------------------------------------------------------------------------------------------------- */
 ::-webkit-scrollbar{
   height: 10px;
