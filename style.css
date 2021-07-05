@@ -82,6 +82,9 @@ width: 100%;
   justify-content: flex-end;
   align-items: center;
 }
+.right:active{
+  background-color: rgba(132, 153, 204, 0.6);
+}
 .right a{
  text-decoration: none;
    color: #ffffff;
@@ -128,6 +131,7 @@ justify-content: center;
   box-shadow: rosybrown;
   /* border: 2px solid red; */
   border-radius: 10px;
+  z-index: -1;
 }
 .slider_img{
   display: none;
@@ -254,6 +258,8 @@ background-color: #707b96;
 box-sizing: border-box;
 /* position: absolute; */
 /* top: 0px; */
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
 }
 .movie_container img{
 width: 100%;
@@ -304,6 +310,8 @@ height: 360px;
   height: 100%;
   transform: rotateY(180deg);
   background-color: blue;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .card:hover .card-motion{
   transform: rotateY(180deg);
@@ -355,6 +363,54 @@ height: 360px;
   .hamburger{
     display: flex;
   }
+  .sub-menu{
+    display: none;
+    background-color: rgba(31, 37, 51,0.7);
+    }
+    
+    .hamburger:hover .sub-menu{
+      display: block;
+      position: absolute;
+      list-style: none;
+      margin-top: 16.8em;
+      margin-left: -15px;
+    }
+    
+    .hamburger:hover .sub-menu ul{
+    list-style: none;
+    display: block;
+    }
+    
+    .hamburger:hover .sub-menu ul li{
+      width: 150px;
+      margin: 10px;
+      padding: 10px;
+      border-bottom: 1px solid wheat;
+    }
+    
+    .hamburger:hover .sub-menu ul li:last-child{
+      border-bottom: none;
+    }
+    .hamburger:hover .sub-menu ul li :first-child{
+      margin-top: 0;
+    }
+    .hamburger:hover .sub-menu ul li a:hover{
+      color: wheat;
+    }
+    .hamburger:hover .sub-menu ul li a{
+      color: white;
+      text-decoration: none;
+    }
+
+    .sub_menu{
+      display: none;
+      background-color:  rgba(31, 37, 51,0.7);
+    }
+
+    .dropdown a:hover .sub_menu{
+      display: list-item;
+      position: absolute;
+    }
 }
 @media (min-width: 0px) and (max-width: 800px)
 {
@@ -476,3 +532,160 @@ height: 360px;
     display: none;
   }
 }
+
+/* signin */
+.sub-menu{
+display: none;
+background-color: rgba(31, 37, 51,0.7);
+}
+
+#signin_link:hover .sub-menu{
+  display: block;
+  position: absolute;
+  list-style: none;
+  /* margin-top: 15px; */
+  margin-left: -15px;
+}
+
+#signin_link:hover .sub-menu ul{
+list-style: none;
+display: block;
+}
+
+#signin_link:hover .sub-menu ul li{ 
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 1px solid wheat;
+}
+#signin_link:hover .sub-menu ul li:last-child{
+  border-bottom: none;
+}
+#signin_link:hover .sub-menu ul li :first-child{
+  margin-top: 0;
+}
+#signin_link:hover .sub-menu ul li a:hover{
+  color: wheat;
+}
+
+/* theater */
+
+.sub-menu{
+  display: none;
+  background-color: rgba(31, 37, 51,0.7);
+  }
+  
+  #theater:hover .sub-menu{
+    display: block;
+    position: absolute;
+    list-style: none;
+    /* margin-top: 15px; */
+    margin-left: -15px;
+  }
+  
+  #theater:hover .sub-menu ul{
+  list-style: none;
+  display: block;
+  }
+  
+  #theater:hover .sub-menu ul li{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid wheat;
+  }
+  
+  #theater:hover .sub-menu ul li:last-child{
+    border-bottom: none;
+  }
+  #theater:hover .sub-menu ul li :first-child{
+    margin-top: 0;
+  }
+  #theater:hover .sub-menu ul li a:hover{
+    color: wheat;
+  }
+
+  /* Movie */
+
+
+.sub-menu{
+  display: none;
+  background-color: rgba(31, 37, 51,0.7);
+  }
+  
+  #Movie:hover .sub-menu{
+    display: block;
+    position: absolute;
+    list-style: none;
+    /* margin-top: 15px; */
+    margin-left: -15px;
+  }
+  
+  #Movie:hover .sub-menu ul{
+  list-style: none;
+  display: block;
+  }
+  
+  #Movie:hover .sub-menu ul li{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid wheat;
+  }
+  
+  #Movie:hover .sub-menu ul li:last-child{
+    border-bottom: none;
+  }
+  #Movie:hover .sub-menu ul li :first-child{
+    margin-top: 0;
+  }
+  #Movie:hover .sub-menu ul li a:hover{
+    color: wheat;
+  }
+
+  /* User-logo */
+
+  .sub-menu{
+    display: none;
+    background-color: rgba(31, 37, 51,0.7);
+    }
+    
+    #user_logo:hover .sub-menu{
+      display: block;
+      position: absolute;
+      list-style: none;
+      /* margin-top: 15px; */
+      margin-left: -15px;
+    }
+    
+    #user_logo:hover .sub-menu ul{
+    list-style: none;
+    display: block;
+    }
+    
+    #user_logo:hover .sub-menu ul li{
+      width: 150px;
+      margin: 10px;
+      padding: 10px;
+      border-bottom: 1px solid wheat;
+    }
+    
+    #user_logo:hover .sub-menu ul li:last-child{
+      border-bottom: none;
+    }
+    #user_logo:hover .sub-menu ul li :first-child{
+      margin-top: 0;
+    }
+    #user_logo:hover .sub-menu ul li a:hover{
+      color: wheat;
+    }
+
+    /* hamburger */
+
+    .home{
+      background: rgba(106, 112, 128, 0.7);
+      padding: 5px 8px 5px 8px;
+    }
+
+    
+
