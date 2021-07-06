@@ -10,7 +10,11 @@ const total_images = document.querySelector(".dots").children.length;
 let current = 0;
 // let slider_height;
 
+
+const logout=document.querySelector(".logout");
+logout.style.display="none";
 const token = localStorage.getItem("jwt");
+
 if (token) {
     fetch(`${url}/verify_login`, {
       method: "GET",
@@ -25,9 +29,16 @@ if (token) {
             let user_logo = document.getElementById("user_logo");
             signin.style.display = "none";
             user_logo.style.display = "block";
+            logout.style.display="block";
         }
     })
 }
+logout.addEventListener("click",()=>{
+    signin.style.display = "block";
+            user_logo.style.display = "none";
+            logout.style.display="none";
+            location.href="/";
+})
 
 
 slider.children[0].style.display = "block";
