@@ -4,7 +4,7 @@ const id = urlParams.get("id");
 
 // let input = document.querySelector(".date").children[0]
 // const id = 337404;
-const url = 'http://localhost:3000/slots';
+const url = 'http://localhost:3000';
 let date = new Date;
 // let x = date.;
 let current_min = date.getHours()*60 + date.getMinutes();
@@ -41,7 +41,37 @@ let status = 0;
 let go_book = document.querySelector(".book_now").children[0];
 go_book.addEventListener("click",() => {
     if(status!=0)
-    location.href = `../book/index.html?id=${id}&slot=${final_slot}&date=${date}`;
+    {
+        const token = localStorage.getItem("jwt");
+        if (token) {
+            fetch(`${url}/verify_login`, {
+              method: "GET",
+              headers: {
+                authorization: token,
+              },
+            }).then((res) => {
+                console.log(res)
+                if(res.status == 200)
+                {
+                    location.href = `../book/index.html?id=${id}&slot=${final_slot}&date=${date}`;
+                }
+                else
+                {
+                    // console.log("hii")
+                    let loading_image = document.querySelector(".loading_image");
+                    loading_image.style.display = "block";
+                    window.scrollTo(0,0);
+                }
+            })
+        }
+        else
+        {
+            // console.log("hii")
+            let loading_image = document.querySelector(".loading_image");
+            loading_image.style.display = "block";
+            window.scrollTo(0,0);
+        }
+    }
 })
 function select_slot(x)
 {
@@ -105,7 +135,7 @@ https://api.themoviedb.org/3/movie/${id}?api_key=65bdc6e47dd2725b55a936c4b0242e7
 obj2 = {
     movie_id : id
 }
-fetch(`${url}/show_available`,{
+fetch(`${url}/slots/show_available`,{
     method : "POST",
     body: JSON.stringify(obj2),
     headers : {
@@ -182,7 +212,7 @@ obj = {
     date : date,
     movie_id : id
 }
-fetch(`${url}/show_slots`,{
+fetch(`${url}/slots/show_slots`,{
     method : "POST",
     body: JSON.stringify(obj),
     headers : {
@@ -232,3 +262,9 @@ book_now.style.display = "block";
 }
 show_slot();
 
+let closebox = document.getElementById("closebox");
+
+closebox.addEventListener("click",() => {
+    let loading_image = document.querySelector(".loading_image");
+    loading_image.style.display = "none";
+})

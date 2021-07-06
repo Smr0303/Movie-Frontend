@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./signin.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="signin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+</head>
 
-  <body>
-    <main>
-        <div class="content">
-            <div class="website_name">
-          <span class="logo">
-            <img class="image" src="../assets/logo.png" />
-          </span>
-          <div class="head">
-            <h2>KINO</h2>
-            <h1>tickets.com</h1>
-          </div>
-          <div class="text">
-              <p>if you dont have an account <a href="./signup.html">register here</a></p>
-
-          </div>
+<body>
+    <div class="container">
+        <div class="logo">
+             <img src="../assets/logo.png" alt="" id="logo_img">
+             <h1>KinoTicket.com</h1>
+             <div class="display_image">
+                 <div class="row">
+                     <img src="https://image.tmdb.org/t/p/w200/rTh4K5uw9HypmpGslcKd4QfHl93.jpg" alt="">
+                     <img src="https://image.tmdb.org/t/p/w200/xbSuFiJbbBWCkyCCKIMfuDCA4yV.jpg" alt="">
+                     <img src="https://image.tmdb.org/t/p/w200/M7SUK85sKjaStg4TKhlAVyGlz3.jpg" alt="">
+                 </div>
+                 <div class="row">
+                     <img src="https://image.tmdb.org/t/p/w200/srYGZ1rd9rvzwAltcKREUdS1JSQ.jpg" alt="">
+                     <img src="https://image.tmdb.org/t/p/w200/nkayOAUBUu4mMvyNf9iHSUiPjF1.jpg" alt="">
+                     <img src="https://image.tmdb.org/t/p/w200/z8CExJekGrEThbpMXAmCFvvgoJR.jpg" alt="">
+                 </div>
+             </div>
         </div>
-
+        <div class="signup_entry">
+            <div class="warning">
+                <!-- <h1>Enter Your Name</h1> -->
+            </div>
+            <h1>SignIn</h1>
+            <div class="form_input">
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Proceed</button>
+            </div>
+            <div class="existing_user">
+                <h1>New User? <a href="signup.html">SignUp</a></h1>
+            </div>
         </div>
-      <div class="sign-in">
-        <div class="form">
-          <form class="sign-in-form">
-            <h2 class="heading">Welcome Back!</h2>
-            <input class="input-email" type="text" placeholder="Enter email" />
-            <input class="input-password" type="password" placeholder="Enter password" />
-            <button class="button" type="submit">Sign-in</button>
-          </form>
-        </div>
-        <div class="bottom">
-          <!-- <a href=""><h4>New User?Create account</h4></a> -->
-          <a href="">
-            <h4>Forgot password?</h4>
-          </a>
-        </div>
-      </div>
-    </main>
-  </body>
+    </div>
+    <script src="signin.js"></script>
+</body>
 </html>

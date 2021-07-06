@@ -19,8 +19,19 @@ body{
     top: 0px;
     display: none;
     z-index: 5;
-}
-.another_container::before{
+  }
+  #load_gif{
+      width: 80px;
+  }
+.login_warning{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    display: none;
+    z-index: 5;
+  }
+  .another_container::before{
     background-color: black;
     position: absolute;
     height: 100%;
@@ -28,21 +39,47 @@ body{
     content: "";
     z-index: -1;
     opacity: 0.5;
-}
-
-.another_container{
+  }
+  
+  .another_container{
     position: relative;
     height: 100%;
     /* background-color: black; */
-        display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-.another_container img{
-    /* opacity: 1; */
-    width: 80px;
-}
-/* ------------------------------------------------------------------------------------------------- */
+  }
+  .prompt{
+    padding: 20px;
+    padding-top: 0px;
+    text-align: center;
+    background-color: #8e8ea9;
+    border-radius: 10px;
+    position: relative;
+  }
+  .prompt img{
+    width: 200px;
+  }
+  .prompt h1{
+    color: white;
+    font-size: 25px;
+  }
+  .prompt a{
+    color: white;
+    /* text-decoration: none; */
+  }
+  .cross{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cross img{
+    width: 30px;
+  }
+  /* ------------------------------------------------------------------------------------------------- */
 .container{
     border: 2px solid #747474;
     margin-top: 50px;

@@ -1,16 +1,32 @@
+const url = 'http://localhost:3000';
 const urlParams = new URLSearchParams(window.location.search);
 // console.log(urlParams)
+const token = localStorage.getItem("jwt");
+if (token) {
+fetch(`${url}/verify_login`, {
+  method: "GET",
+  headers: {
+    authorization: token,
+  },
+}).then((res) => {
+    console.log(res)
+    if(res.status != 200)
+    {
+        location.href = `../index.html`
+    }
+})
+}
+
 let id = urlParams.get("id");
 let slot = urlParams.get("slot");
 let date = urlParams.get("date");
-
+let status = 0;
 let just_display_date = "";
 let seat_array = [];
 // let id = 337404;
 // let slot = "slot1";
 // let date = "2021-06-22";
 let time = "";
-const url = 'http://localhost:3000';
 slot_to_time(slot);
 check_valid(date,slot);
 date_converter(date);
@@ -140,6 +156,7 @@ proceed_to_pay.addEventListener("click",() => {
     if(seat_array.length!=0)
     {
     let loading_image = document.querySelector(".loading_image");
+    let login_warning = document.querySelector(".login_warning");
     loading_image.style.display = "block";
     window.scrollTo(0,0);
     console.log(seat_array);
@@ -150,17 +167,26 @@ proceed_to_pay.addEventListener("click",() => {
         date : date,
         seats : seat_array
     }
+    const token = localStorage.getItem("jwt");
     fetch(`${url}/booking/block`,{
         method : "POST",
         body: JSON.stringify(obj),
         headers : {
+            authorization: token,
              "Content-Type" : "application/json"
         }
     }).then((res) => {
-        return res.json()
+        status = res.status;
+       return res.json()
     }).then((data) => {
-        //  console.log(data)
-         location.href = `../payment/index.html?id=${data.order_id}`
+        if(status!=200)
+        {
+         console.log(data)
+         loading_image.style.display = "none";
+         login_warning.style.display = "block";
+        }
+         else
+          location.href = `../payment/index.html?id=${data.order_id}`
     })
 }
 // else
@@ -268,3 +294,10 @@ function date_converter(x)
     let dd = x.slice(8,10);
     just_display_date = `${dd}-${mm}-${yyyy}`;
 }
+
+let closebox = document.getElementById("closebox");
+
+closebox.addEventListener("click",() => {
+    let login_warning = document.querySelector(".login_warning");
+    login_warning.style.display = "none";
+})
