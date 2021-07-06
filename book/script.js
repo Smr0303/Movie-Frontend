@@ -181,7 +181,7 @@ proceed_to_pay.addEventListener("click",() => {
     }).then((data) => {
         if(status!=200)
         {
-         console.log(data)
+        //  console.log(data)
          loading_image.style.display = "none";
          login_warning.style.display = "block";
         }

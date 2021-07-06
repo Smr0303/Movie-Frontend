@@ -10,13 +10,17 @@ let booking_date = "";
 obj = {
     order_id : order_id
 }
+const token = localStorage.getItem("jwt");
 fetch(`${url}/show_pay`,{
     method : "POST",
     body: JSON.stringify(obj),
     headers : {
+        authorization: token,
          "Content-Type" : "application/json"
     }
 }).then((res) => {
+    if(res.status!=200)
+    location.href = '../index.html'
     return res.json()
 }).then((data) => {
     console.log(data);
