@@ -10,11 +10,7 @@ const total_images = document.querySelector(".dots").children.length;
 let current = 0;
 // let slider_height;
 
-
-const logout=document.querySelector(".logout");
-logout.style.display="none";
 const token = localStorage.getItem("jwt");
-
 if (token) {
     fetch(`${url}/verify_login`, {
       method: "GET",
@@ -29,16 +25,9 @@ if (token) {
             let user_logo = document.getElementById("user_logo");
             signin.style.display = "none";
             user_logo.style.display = "block";
-            logout.style.display="block";
         }
     })
 }
-logout.addEventListener("click",()=>{
-    signin.style.display = "block";
-            user_logo.style.display = "none";
-            logout.style.display="none";
-            location.href="/";
-})
 
 
 slider.children[0].style.display = "block";
@@ -126,6 +115,7 @@ fetch(`https://api.themoviedb.org/3/list/7099202?api_key=65bdc6e47dd2725b55a936c
 
     </div>
     <div class="card-back">
+    <h3 class="overview">Overview</h3>
       <p>${data.items[i].overview}</p>
     </div>
   </div> `;
