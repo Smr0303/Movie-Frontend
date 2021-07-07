@@ -275,18 +275,18 @@ body {
       
       /* footer */
   
-   .footer{
-    background-color: #212839;
-    position: absolute;
-    /* top: 204em; */
-    /* border: 2px solid red; */
-    width: 100%;
-    height: 20vh;
-    /* background-color: rgba(31, 37, 51,0.5); */
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-  }
+      .footer{
+        background-color: #212839;
+        position: absolute;
+        /* top: 204em; */
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 20vh;
+        /* background-color: rgba(31, 37, 51,0.5); */
+        display: flex;
+        flex-direction: column;
+        font-family: 'Roboto', sans-serif;
+      }
   
   .logo1 img{
   position: relative;
@@ -419,105 +419,180 @@ body {
 
 
 .open{
-    background-image: url("../assets/rows-red-seats-theater.jpg");
+    background-image: url("https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
 background-position: center;
 background-repeat: no-repeat;
-background-size: cover;
+background-size: 100vw;
 height: 60vh;
+/* position: sticky;
+overflow: auto; */
 /* margin-top: 20px; */
 }
-.open h1{
-    color: white;
-    text-align: center;
-    position: relative;
-    top: 22%;
-    font-size: 140px;
-    font-family: 'Passion One', cursive;
-}
 
-.open h3{
-  color: white;
-  text-align: center;
+.detail{
+    background-color: azure;
+    height: 60vh;
+    /* width: 100vw; */
+}
+#container{
+    display: flex;
+}
+/* .form{
+    float: left;
+    width: 30%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    height: 25em;
+    margin-top: 30px;
+    display: inline-block;
+    justify-content: center;
   position: relative;
-  top: 20%;
-  font-size: 100px;
-  font-family: 'Passion One', cursive;
-}
-
-.makers{
-  background-color: azure;
-  /* margin-top: 20px; */
-  /* border: 2px solid red; */
-}
-/* Three columns side by side */
-.column {
-  /* float: left; */
-  width: 30%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-  height: 25em;
-  margin-top: 30px;
-  display: inline-block;
-  justify-content: center;
-position: relative;
-left: 40px;
-top: 15px;
-}
-
-/* Display the columns below each other instead of side by side on small screens */
-@media screen and (max-width: 650px) {
-  .column {
-    width: 80%;
-    display: block;
-  }
-}
-
-/* Add some shadows to create a card effect */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card img{
-  width: 2em;
-  height: 12em;
-}
-
-/* Some left and right padding inside the container */
-.container {
-  padding: 0 16px;
-  height: 10em;
-  text-align: center;
-}
-
-.container h2{
-  margin: 10px;
-}
-
-/* Clear floats */
-/* .container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
+  left: 40px;
+  top: 15px;
 } */
-
-.title {
-  color: grey;
-  margin: 10px;
+.form1 h3{
+    /* border: 2px solid red; */
+    /* border-bottom: 5px solid wheat;
+    width: fit-content;
+    margin-left: 12px; */
+    display: block;
+    padding: 20px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(31, 37, 51);
 }
 
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 25px;
+.form1 input{
+    padding: 17px;
+    margin: 20px;
+    width: 15em;
+    position: relative;
+    left: 30px;
+    top: 25px;
+    border: 2px solid rgb(223, 223, 223);
+    border-radius: 5px;
 }
 
-.button:hover {
-  background-color: #555;
+.button{
+    padding: 17px;
+    margin: 20px;
+    width: 11em;
+    position: relative;
+    left: 17em;
+    top: 25px;
+    /* border: 2px solid rgb(223, 223, 223); */
+    border-radius: 5px;
+    background-color: rgb(31, 37, 51);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgba(31, 37, 51,0.7);
+}
+
+.fill{
+    padding: 20px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(31, 37, 51);
+    position: relative;
+    left: 1em;
+    /* position: absolute;
+    right: 12.5em; */
+}
+
+.add{
+  padding: 20px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(31, 37, 51);
+  position: relative;
+  left: 8.5em;
+}
+
+
+
+.form1 p{
+    border: 2px solid rgb(216, 214, 214);
+    position: relative;
+    left: 16em;
+    top: 25px;
+    /* margin-top: 6.5em;
+    position: absolute;
+    right: 70px; */
+    margin: 20px;
+    padding: 20px;
+    height: 8em;
+    border-radius: 7px;
+    line-height: 2em;
+}
+
+@media (min-width:928px) and (max-width:1287px){
+  .form1 p{
+    width: 10em;
+height: fit-content;
+    /* width: 50px;
+    font-size: 10px; */
+    /* height: fit-content;
+left: 1em; */
+  }
+  .form input{
+    padding: 8px;
+    width: 12em;
+  }
+  .fill{
+    font-size: 20px;
+  }
+  .add{
+    font-size: 20px;
+    /* position: relative; */
+left: 15em;
+  }
+  /* .detail{
+    width: 250vw;
+  }
+  .open{
+    background-size: 100%;
+  } */
+}
+
+@media (min-width:0px) and (max-width:927px){
+  .detail{
+    height: 80vh;
+  }
+  .form input{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+  }
+  .button{
+    width: 6em;
+    height: 1em;
+    position: relative;
+    left: 5em;
+    top: 15px;
+  }
+  .form1 p{
+    height: fit-content;
+    left: 1em;
+    width: 50px;
+    font-size: 10px;
+  }
+} 
+
+@media screen and (max-width:1170px){
+  .form1{
+    width: 100%;
+  }
+  .fill{
+    font-size: 20px;
+  }
+  .container{
+    display: flex;
+  }
+  .add{
+    font-size: 20px;
+    left: 0.1em;
+  }
 }
