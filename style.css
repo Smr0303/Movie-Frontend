@@ -77,6 +77,9 @@ width: 100%;
   background-color: rgba(255,255,255,0.8);
   /* background-color: #dce4e1; */
 }
+.fa{
+ cursor:pointer; 
+}
 .right{
   width: 40%;
   /* border: 2px solid yellow; */
@@ -350,11 +353,7 @@ border-radius: 7px;
   justify-content: center;
   align-items: center;
 }
-.kinologo_and_social{
-  /* width: 400px; */
-  /* height: 250px; */
-  /* border: 2px solid green; */
-}
+
 .kinologo{
   /* border: 2px solid red; */
   text-align: center;

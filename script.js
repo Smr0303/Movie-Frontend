@@ -96,6 +96,7 @@ setInterval(() => {
 // ---------------------------------------- navbar 2 end ----------------------------------------------
 let streaming = document.querySelector(".streaming");
 
+
 fetch(`https://api.themoviedb.org/3/list/7100885?api_key=65bdc6e47dd2725b55a936c4b0242e7b&language=en-US`).then((res)=> {
     return res.json()
 }).then((data) => {
@@ -111,37 +112,64 @@ fetch(`https://api.themoviedb.org/3/list/7100885?api_key=65bdc6e47dd2725b55a936c
        <img src="https://image.tmdb.org/t/p/w200/${data.items[i].poster_path}" alt="">
        <div class="title">
          <h1>${data.items[i].title}</h1>
-        </div>
-         <div class="rating">
-           <img src="./assets/star.png" alt="">
-           <h2>${data.items[i].vote_average}</h2>
          </div>
-
-    </div>
-    <div class="card-back">
+         <div class="rating">
+         <img src="./assets/star.png" alt="">
+         <h2>${data.items[i].vote_average}</h2>
+         </div>
+         
+         </div>
+         <div class="card-back">
       <h1>Overview</h1>
       <p>${data.items[i].overview}</p>
       <button>Book Now</button>
-    </div>
-  </div> `;
-        streaming.appendChild(card)
+      </div>
+      </div> `;
+      streaming.appendChild(card)
     }
 })
 
 function show_movie(id)
 {
-
+    
     // console.log(id)
     // if(window.screen.width<=1200)
     // {
-    location.href = `./movies/index.html?id=${id}`
-    // }
+        location.href = `./movies/index.html?id=${id}`
+        // }
+    }
+    
+    // ----------------------------------------- navbar 3 ---------------------------------------------------
+    function logout_user()
+    {
+        localStorage.removeItem("jwt");
+        location.reload();
+    }
+    // ---------------------------------------- navbar 3 end ------------------------------------------------
+    
+    
+    const searchbutton=document.querySelector(".fa");
+    searchbutton.addEventListener("click",()=>{
+          var value=document.querySelector(".search input").value;
+        if(value===""){
+            alert("no title entered");
 }
-
-// ----------------------------------------- navbar 3 ---------------------------------------------------
-function logout_user()
-{
-    localStorage.removeItem("jwt");
-    location.reload();
+else{
+    fetch(`https://api.themoviedb.org/3/list/7100885?api_key=65bdc6e47dd2725b55a936c4b0242e7b&language=en-US`)
+    .then((res)=>{
+        return res.json();
+    }).then((data)=>{
+        for(let x=0;x<data.items.length;i++){
+            let i=data.items[x].title;
+         if(i.includes(value)){
+                console.log("yes");
+            }
+            else{
+                alert("No such movie in database");
+            }
+        }
+        
+    })
 }
-// ---------------------------------------- navbar 3 end ------------------------------------------------
+    });
+    
