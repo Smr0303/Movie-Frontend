@@ -159,17 +159,12 @@ else{
     .then((res)=>{
         return res.json();
     }).then((data)=>{
-        for(let x=0;x<data.items.length;i++){
+        for(let x=0;x<data.items.length;x++){
             let i=data.items[x].title;
          if(i.includes(value)){
-                console.log("yes");
+            location.href = `./movies/index.html?id=${data.items[x].id}`
             }
-            else{
-                alert("No such movie in database");
-            }
-        }
-        
-    })
+        }})
 }
     });
     
