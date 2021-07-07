@@ -1,3 +1,4 @@
+const url = 'http://localhost:3000';
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 let status = 1;
@@ -10,6 +11,32 @@ function show_slot(id)
 // console.log(id)
 location.href = `../slots/index.html?id=${id}`
 }
+
+// ------------------------------------ navbar 1 --------------------------------------------------------
+const token = localStorage.getItem("jwt");
+
+if (token) {
+    fetch(`${url}/verify_login`, {
+      method: "GET",
+      headers: {
+        authorization: token,
+      },
+    }).then((res) => {
+        console.log(res)
+        if(res.status == 200)
+        {
+            let signin = document.getElementById("signin_link");
+            let hamburger_signin = document.getElementById("hamburger_signin");
+            let user_logo = document.getElementById("user_logo");
+            let hamburger_after_login = document.getElementById("hamburger_after_login");
+            signin.style.display = "none";
+            hamburger_signin.style.display = "none";
+            user_logo.style.display = "block";
+            hamburger_after_login.style.display = "block"
+        }
+    })
+}
+// --------------------------------------- navbar 1 end -------------------------------------------------
 
 // function show_page()
 // {
@@ -100,3 +127,24 @@ https://api.themoviedb.org/3/movie/${id}/credits?api_key=65bdc6e47dd2725b55a936c
 })
 // }
 
+// ----------------------------------------- navbar 2 ------------------------------------------------
+{
+    let i=0,j=0;
+    let search = document.querySelector(".search").children[0];
+    let str = ["Movies...","Shows...","Sports..."]
+    setInterval(() => {
+        search.placeholder = str[j].slice(0,i);
+        i=(i+1)%(str[j].length+1);
+        if(i==0)
+        j= (j+1)%str.length;
+    }, 200);
+    }
+// ---------------------------------------- navbar 2 end ----------------------------------------------
+
+// ----------------------------------------- navbar 3 ---------------------------------------------------
+function logout_user()
+{
+    localStorage.removeItem("jwt");
+    location.reload();
+}
+// ---------------------------------------- navbar 3 end ------------------------------------------------

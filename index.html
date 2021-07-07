@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+<!-- -------------------------------------------------navbar 1 -------------------------------------- -->
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
       rel="stylesheet"
@@ -16,11 +17,11 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<!-- -------------------------------------------navbar 1 end ----------------------------------------- -->
     <title>Document</title>
   </head>
   <body>
+<!-- ----------------------------------------------navbar 2 ------------------------------------------ -->
     <div class="navbar">
       <div class="left">
         <div class="website_name">
@@ -63,20 +64,21 @@
             </div>
       
         <div id="signin_link">
-        <a href="#" >SignIn </a>
+        <a href="./authentication/signin.html" >SignIn </a>
           <div class="sub-menu">
           <ul>
             <li><a href="./authentication/signup.html">Register</a> </li>
           </ul>
-          </div>
         </div>
-
-        <div id="user_logo">
+      </div>
+      
+      <div id="user_logo">
         <a><img src="./assets/user_logo.png" alt="" id="user_logo_img"></a>
-          <div class="sub-menu">
-            <ul>
-              <li><a href="#"> My Profile</a></li>
-              <li><a href="#">Bookings</a></li>
+        <div class="sub-menu">
+          <ul>
+            <li><a href="#"> My Profile</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#"class ="logout" onclick = "logout_user()">Log out</a></li>
             </ul>
             </div>
         </div>
@@ -86,7 +88,7 @@
          <img src="./assets/hamburger.png" alt="">
          <div class="sub-menu">
           <ul>
-           <li><a href="#"> Home
+           <li><a href="./index.html"> Home
               
            </a></li>
             <li><div class="dropdown"><a href="#">Movie</a>
@@ -99,11 +101,17 @@
               </div>
             </div></li>
             <li><a href="#"> Theaters</a></li>
-            <li><a href="#"> SignIn</a></li>
+            <li id="hamburger_signin"><a href="#" > SignIn</a></li>
+            <ul id="hamburger_after_login">
+              <li><a href="">My Profile</a></li>
+              <li><a href="">My Bookings</a></li>
+              <li><a href="" onclick = "logout_user()">Logout</a></li>
+            </ul>
           </ul>
           </div>
        </div>
      </div>
+<!-- ------------------------------------navbar 2 end ----------------------------------------------- -->
     <div class="slider_parent">
 
       <div class="slider">
@@ -142,7 +150,6 @@
   </div>
 <div class="after_slider">
   <div class="streaming">
-    <!-- <h2 class="now_showing">Now Showing</h2> -->
 <!-- -------------------------------------------------------------------------------------------- -->
 <!-- <div class="card">
 <div class="card-motion">
@@ -166,33 +173,21 @@
   </div>
 </div>
 <div class="footer">
-    <!-- <div class="upcoming-movies">
-    Upcoming Movies
-
-  </div> -->
-
-  <!-- <div class="movies-by-lang">
-    Movies by Language
+<div class="kinologo_and_social">
+  <div class="kinologo">
+    <img src="./assets/logo.png" alt="">
   </div>
-
-  <div class="movie-reviews">
-     Movie Reviews
-  </div> -->
-
-  <div class="logo1">
-    <img src="./assets/logo.png" class="image">
-  </div>
-
-  <div class="social_sites">
-    <div class="social-media">
+  <div class="social">
     <img src="./assets/fb_icon.png" alt="">
     <img src="./assets/insta_icon.png" alt="">
     <img src="./assets/twitter_icon.png" alt="">
   </div>
-  <div class="contact">
-    <a href="./footer/about.html">About Us</a>
-    <a href="#">Contact Us</a>
-    <a href="#">Feedback</a>
+  <div class="extra_pages">
+    <ul>
+      <li><a href="./footer/about.html">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Feedback</a></li>
+    </ul>
   </div>
 </div>
 </div>

@@ -1,7 +1,34 @@
 const urlParams = new URLSearchParams(window.location.search);
 let order_id = urlParams.get("id");
-const url = 'http://localhost:3000/booking';
+const url = 'http://localhost:3000';
+const token = localStorage.getItem("jwt");
 // let order_id = 'order_HUOdcOfP83sne0';
+
+// ------------------------------------ navbar 1 --------------------------------------------------------
+
+if (token) {
+    fetch(`${url}/verify_login`, {
+      method: "GET",
+      headers: {
+        authorization: token,
+      },
+    }).then((res) => {
+        console.log(res)
+        if(res.status == 200)
+        {
+            let signin = document.getElementById("signin_link");
+            let hamburger_signin = document.getElementById("hamburger_signin");
+            let user_logo = document.getElementById("user_logo");
+            let hamburger_after_login = document.getElementById("hamburger_after_login");
+            signin.style.display = "none";
+            hamburger_signin.style.display = "none";
+            user_logo.style.display = "block";
+            hamburger_after_login.style.display = "block"
+        }
+    })
+}
+// --------------------------------------- navbar 1 end -------------------------------------------------
+
 let body = document.querySelector("body");
 let time = "";
 let seats = "";
@@ -10,8 +37,9 @@ let booking_date = "";
 obj = {
     order_id : order_id
 }
-const token = localStorage.getItem("jwt");
-fetch(`${url}/show_pay`,{
+if(!token)
+location.href = `../index.html`
+fetch(`${url}/booking/show_pay`,{
     method : "POST",
     body: JSON.stringify(obj),
     headers : {
@@ -38,6 +66,9 @@ ticket_container.classList.add("ticket_container");
 ticket_container.innerHTML = `
 <div class="movie_image">
 <img src="https://image.tmdb.org/t/p/w200${movie_data.poster_path}" alt="">
+<div class="extra">
+<img src="https://image.tmdb.org/t/p/w200${movie_data.production_companies[0].logo_path}" alt="">
+</div>
 </div>
 <div class="details_and_status">
 <div class="status">
@@ -164,3 +195,25 @@ function booking_date_converter(x)
     let dd = x.slice(8,10);
     booking_date = `${dd}-${mm}-${yyyy}`;
 }
+
+// ----------------------------------------- navbar 2 ------------------------------------------------
+{
+    let i=0,j=0;
+    let search = document.querySelector(".search").children[0];
+    let str = ["Movies...","Shows...","Sports..."]
+    setInterval(() => {
+        search.placeholder = str[j].slice(0,i);
+        i=(i+1)%(str[j].length+1);
+        if(i==0)
+        j= (j+1)%str.length;
+    }, 200);
+    }
+// ---------------------------------------- navbar 2 end ----------------------------------------------
+
+// ----------------------------------------- navbar 3 ---------------------------------------------------
+function logout_user()
+{
+    localStorage.removeItem("jwt");
+    location.reload();
+}
+// ---------------------------------------- navbar 3 end ------------------------------------------------

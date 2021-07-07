@@ -1,10 +1,37 @@
+const url = 'http://localhost:3000';
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
+
+// ------------------------------------ navbar 1 --------------------------------------------------------
+const token = localStorage.getItem("jwt");
+
+if (token) {
+    fetch(`${url}/verify_login`, {
+      method: "GET",
+      headers: {
+        authorization: token,
+      },
+    }).then((res) => {
+        console.log(res)
+        if(res.status == 200)
+        {
+            let signin = document.getElementById("signin_link");
+            let hamburger_signin = document.getElementById("hamburger_signin");
+            let user_logo = document.getElementById("user_logo");
+            let hamburger_after_login = document.getElementById("hamburger_after_login");
+            signin.style.display = "none";
+            hamburger_signin.style.display = "none";
+            user_logo.style.display = "block";
+            hamburger_after_login.style.display = "block"
+        }
+    })
+}
+// --------------------------------------- navbar 1 end -------------------------------------------------
 
 
 // let input = document.querySelector(".date").children[0]
 // const id = 337404;
-const url = 'http://localhost:3000';
+
 let date = new Date;
 // let x = date.;
 let current_min = date.getHours()*60 + date.getMinutes();
@@ -268,3 +295,25 @@ closebox.addEventListener("click",() => {
     let loading_image = document.querySelector(".loading_image");
     loading_image.style.display = "none";
 })
+
+// ----------------------------------------- navbar 2 ------------------------------------------------
+{
+    let i=0,j=0;
+    let search = document.querySelector(".search").children[0];
+    let str = ["Movies...","Shows...","Sports..."]
+    setInterval(() => {
+        search.placeholder = str[j].slice(0,i);
+        i=(i+1)%(str[j].length+1);
+        if(i==0)
+        j= (j+1)%str.length;
+    }, 200);
+    }
+// ---------------------------------------- navbar 2 end ----------------------------------------------
+
+// ----------------------------------------- navbar 3 ---------------------------------------------------
+function logout_user()
+{
+    localStorage.removeItem("jwt");
+    location.reload();
+}
+// ---------------------------------------- navbar 3 end ------------------------------------------------

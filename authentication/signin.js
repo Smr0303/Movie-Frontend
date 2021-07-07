@@ -80,3 +80,17 @@ Password_value = event.target.value;
         }
     })
  })
+
+  // ----------------------------------------- navbar 2 ------------------------------------------------
+{
+    let i=0,j=0;
+    let search = document.querySelector(".search").children[0];
+    let str = ["Movies...","Shows...","Sports..."]
+    setInterval(() => {
+        search.placeholder = str[j].slice(0,i);
+        i=(i+1)%(str[j].length+1);
+        if(i==0)
+        j= (j+1)%str.length;
+    }, 200);
+    }
+// ---------------------------------------- navbar 2 end ----------------------------------------------

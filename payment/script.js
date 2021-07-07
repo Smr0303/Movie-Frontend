@@ -1,6 +1,32 @@
 const urlParams = new URLSearchParams(window.location.search);
 let order_id = urlParams.get("id");
-const url = 'http://localhost:3000/booking';
+const url = 'http://localhost:3000';
+const token = localStorage.getItem("jwt");
+
+// ------------------------------------ navbar 1 --------------------------------------------------------
+if (token) {
+    fetch(`${url}/verify_login`, {
+      method: "GET",
+      headers: {
+        authorization: token,
+      },
+    }).then((res) => {
+        console.log(res)
+        if(res.status == 200)
+        {
+            let signin = document.getElementById("signin_link");
+            let hamburger_signin = document.getElementById("hamburger_signin");
+            let user_logo = document.getElementById("user_logo");
+            let hamburger_after_login = document.getElementById("hamburger_after_login");
+            signin.style.display = "none";
+            hamburger_signin.style.display = "none";
+            user_logo.style.display = "block";
+            hamburger_after_login.style.display = "block"
+        }
+    })
+}
+// --------------------------------------- navbar 1 end -------------------------------------------------
+
 // let order_id = 'order_HTkhd5PYkIQbBb';
 let body = document.querySelector("body");
 let time = "";
@@ -10,8 +36,10 @@ obj = {
     order_id : order_id
 }
 let options = obj;
-const token = localStorage.getItem("jwt");
-fetch(`${url}/show_pay`,{
+
+if(!token)
+location.href = `../index.html`
+fetch(`${url}/booking/show_pay`,{
     method : "POST",
     body: JSON.stringify(obj),
     headers : {
@@ -48,6 +76,9 @@ container.classList.add("container");
 container.innerHTML = `
 <div class="movie_image">
 <img src="https://image.tmdb.org/t/p/w200${movie_data.poster_path}" alt="">
+<div class="extra">
+<img src="https://image.tmdb.org/t/p/w200${movie_data.production_companies[0].logo_path}" alt="">
+</div>
 </div>
 <div class="details_and_payment">
 <div class="details">
@@ -90,7 +121,7 @@ options = {
             order_id : order_id,
             payment_id : response.razorpay_payment_id
         }
-        fetch(`${url}/check_pay`,{
+        fetch(`${url}/booking/check_pay`,{
             method : "POST",
             body: JSON.stringify(obj),
             headers : {
@@ -124,7 +155,7 @@ rzp1.on('payment.failed', function (response){
         order_id : order_id,
         payment_id : response.error.metadata.payment_id
     }
-    fetch(`${url}/check_pay`,{
+    fetch(`${url}/booking/check_pay`,{
         method : "POST",
         body: JSON.stringify(obj),
         headers : {
@@ -229,3 +260,25 @@ function date_converter(x)
     let dd = x.slice(8,10);
     movie_date = `${dd}-${mm}-${yyyy}`;
 }
+
+// ----------------------------------------- navbar 2 ------------------------------------------------
+{
+    let i=0,j=0;
+    let search = document.querySelector(".search").children[0];
+    let str = ["Movies...","Shows...","Sports..."]
+    setInterval(() => {
+        search.placeholder = str[j].slice(0,i);
+        i=(i+1)%(str[j].length+1);
+        if(i==0)
+        j= (j+1)%str.length;
+    }, 200);
+    }
+// ---------------------------------------- navbar 2 end ----------------------------------------------
+
+// ----------------------------------------- navbar 3 ---------------------------------------------------
+function logout_user()
+{
+    localStorage.removeItem("jwt");
+    location.reload();
+}
+// ---------------------------------------- navbar 3 end ------------------------------------------------

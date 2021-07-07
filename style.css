@@ -1,5 +1,6 @@
+/* ----------------------------navbar font --------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
-
+/* -----------------------navbar font end---------------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body {
   /* background-color: #24262b; */
   background-color: #212839;
 }
+/* --------------------------------------- navbar 1 -------------------------------------------------- */
 .navbar{
   width: 100%;
   /* height: 70px; */
@@ -82,9 +84,6 @@ width: 100%;
   justify-content: flex-end;
   align-items: center;
 }
-.right:active{
-  background-color: rgba(132, 153, 204, 0.6);
-}
 .right a{
  text-decoration: none;
    color: #ffffff;
@@ -122,6 +121,7 @@ justify-content: center;
   margin-top: 5px;
   width: 33px;
 }
+/* -----------------------------navbar 1 end ------------------------------------------------------- */
 .slider{
   /* height: 400px; */
   width: 1100px;
@@ -131,7 +131,6 @@ justify-content: center;
   box-shadow: rosybrown;
   /* border: 2px solid red; */
   border-radius: 10px;
-  z-index: -1;
 }
 .slider_img{
   display: none;
@@ -221,17 +220,7 @@ left: 10px;
   background-color: #e0e0e0;
   padding-bottom: 30px;
 }
- /* .now_showing{
-  border: 1px solid red;
-  width: 100vw;
-  margin: 20px;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  color: rgb(33, 40, 57);
-  font-family: 'Permanent Marker', cursive;
-  font-size: 3em;
-  font-weight: 200;
-}  */
+
 .card{
   width: 240px;
   /* border: 2px solid blue; */
@@ -239,9 +228,6 @@ left: 10px;
   animation-name: show;
   animation-duration: 2s;
 }
-/* .card:first-child{
-  margin-top: 20px;
-} */
 @keyframes show{
   from{
     opacity: 0;
@@ -274,6 +260,7 @@ box-sizing: border-box;
 /* top: 0px; */
 -webkit-backface-visibility: hidden;
 backface-visibility: hidden;
+
 }
 .movie_container img{
 width: 100%;
@@ -323,38 +310,84 @@ height: 360px;
   top: 0px;
   height: 100%;
   transform: rotateY(180deg);
-  background-color: rgba(33, 40, 57,0.8);
-  color: wheat;
-  font-size: 14px;
+  background-color: #031228;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   -webkit-backface-visibility: hidden;
 backface-visibility: hidden;
-/* align-items: center; */
 }
 .card-back p{
-  text-align: center;
-  overflow: auto;
-  font-family: 'Lato', sans-serif;
+  /* border: 2px solid green; */
+  margin-top: 7px;
+color: #b0a2a2;
 font-family: 'Open Sans', sans-serif;
+font-size: 12px;
 }
-.overview{
-  width: fit-content;
-  color: rgb(250, 250, 250);
-  border-bottom: 3px solid rgb(33, 40, 57);
-  margin-bottom: 15px;
-  line-break: loose;
-  position: relative;
-  left: 3.8em;
-  margin-top: 15px;
-  font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
+.card-back h1{
+  /* border: 2px solid green; */
+color: #b0a2a2;
+font-family: 'Open Sans', sans-serif;
+text-decoration: underline;
+font-size: 18px;
+}
+.card-back button{
+  margin-top: 20px;
+background-color: #2b91a8;
+width: 100px;
+padding: 5px;
+border-radius: 7px;
 }
 .card:hover .card-motion{
   transform: rotateY(180deg);
 }
 
 .footer{
-  height: 350px;
+  height: 250px;
   background-color: #212839;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kinologo_and_social{
+  /* width: 400px; */
+  /* height: 250px; */
+  /* border: 2px solid green; */
+}
+.kinologo{
+  /* border: 2px solid red; */
+  text-align: center;
+}
+.kinologo img{
+  width: 60px;
+}
+.social{
+  display: flex;
+  /* border: 2px solid blue; */
+  justify-content: center;
+}
+.social img{
+  width: 40px;
+  border-radius: 15px;
+  margin: 5px;
+}
+.extra_pages{
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+}
+.extra_pages ul{
+  padding-top: 10px;
+  display: flex;
+}
+.extra_pages ul li{
+  list-style: none;
+}
+.extra_pages ul li a{
+  color: white;
+  text-decoration: none;
+  margin: 8px;
 }
 /* --------------------------------------------------------------------------------------------------- */
 ::-webkit-scrollbar{
@@ -387,6 +420,7 @@ font-family: 'Open Sans', sans-serif;
     border-top-right-radius: 0px;
   }
 }
+/* ---------------------------------------navbar 2 -------------------------------------------------- */
 @media (min-width: 0px) and (max-width: 1000px)
 {
   .right{
@@ -447,6 +481,7 @@ font-family: 'Open Sans', sans-serif;
       position: absolute;
     }
 }
+/* --------------------------------------------navbar 2 end--------------------------------------------- */
 @media (min-width: 0px) and (max-width: 800px)
 {
   .slider{
@@ -478,6 +513,7 @@ font-family: 'Open Sans', sans-serif;
   height: 8px;
 }
 }
+/* --------------------------------------navbar 3 --------------------------------------------------- */
 @media (min-width: 0px) and (max-width: 500px)
 {
   .website_name{
@@ -510,6 +546,7 @@ font-family: 'Open Sans', sans-serif;
      font-size: 10px;
   }
 }
+/* -------------------------------------- navbar 3 end ---------------------------------------------- */
 @media (min-width: 0px) and (max-width: 900px)
 {
   .card{
@@ -568,49 +605,15 @@ font-family: 'Open Sans', sans-serif;
   }
 }
 
+/* ----------------------------------------------navbar 4 ------------------------------------------ */
 /* signin */
 .sub-menu{
-display: none;
-background-color: rgba(31, 37, 51,0.7);
-}
-
-#signin_link:hover .sub-menu{
-  display: block;
-  position: absolute;
-  list-style: none;
-  /* margin-top: 15px; */
-  margin-left: -15px;
-}
-
-#signin_link:hover .sub-menu ul{
-list-style: none;
-display: block;
-}
-
-#signin_link:hover .sub-menu ul li{ 
-  width: 150px;
-  margin: 10px;
-  padding: 10px;
-  border-bottom: 1px solid wheat;
-}
-#signin_link:hover .sub-menu ul li:last-child{
-  border-bottom: none;
-}
-#signin_link:hover .sub-menu ul li :first-child{
-  margin-top: 0;
-}
-#signin_link:hover .sub-menu ul li a:hover{
-  color: wheat;
-}
-
-/* theater */
-
-.sub-menu{
   display: none;
   background-color: rgba(31, 37, 51,0.7);
+  z-index: 1;
   }
   
-  #theater:hover .sub-menu{
+  #signin_link:hover .sub-menu{
     display: block;
     position: absolute;
     list-style: none;
@@ -618,211 +621,150 @@ display: block;
     margin-left: -15px;
   }
   
-  #theater:hover .sub-menu ul{
+  #signin_link:hover .sub-menu ul{
   list-style: none;
   display: block;
   }
   
-  #theater:hover .sub-menu ul li{
+  #signin_link:hover .sub-menu ul li{ 
     width: 150px;
     margin: 10px;
     padding: 10px;
     border-bottom: 1px solid wheat;
   }
-  
-  #theater:hover .sub-menu ul li:last-child{
+  #signin_link:hover .sub-menu ul li:last-child{
     border-bottom: none;
   }
-  #theater:hover .sub-menu ul li :first-child{
+  #signin_link:hover .sub-menu ul li :first-child{
     margin-top: 0;
   }
-  #theater:hover .sub-menu ul li a:hover{
+  #signin_link:hover .sub-menu ul li a:hover{
     color: wheat;
   }
-
-  /* Movie */
-
-
-.sub-menu{
-  display: none;
-  background-color: rgba(31, 37, 51,0.7);
-  }
   
-  #Movie:hover .sub-menu{
-    display: block;
-    position: absolute;
-    list-style: none;
-    /* margin-top: 15px; */
-    margin-left: -15px;
-  }
+  /* theater */
   
-  #Movie:hover .sub-menu ul{
-  list-style: none;
-  display: block;
-  }
-  
-  #Movie:hover .sub-menu ul li{
-    width: 150px;
-    margin: 10px;
-    padding: 10px;
-    border-bottom: 1px solid wheat;
-  }
-  
-  #Movie:hover .sub-menu ul li:last-child{
-    border-bottom: none;
-  }
-  #Movie:hover .sub-menu ul li :first-child{
-    margin-top: 0;
-  }
-  #Movie:hover .sub-menu ul li a:hover{
-    color: wheat;
-  }
-
-  /* User-logo */
-
   .sub-menu{
     display: none;
     background-color: rgba(31, 37, 51,0.7);
     }
     
-    #user_logo:hover .sub-menu{
+    #theater:hover .sub-menu{
       display: block;
       position: absolute;
       list-style: none;
       /* margin-top: 15px; */
       margin-left: -15px;
+      z-index: 1;
     }
     
-    #user_logo:hover .sub-menu ul{
+    #theater:hover .sub-menu ul{
     list-style: none;
     display: block;
     }
     
-    #user_logo:hover .sub-menu ul li{
+    #theater:hover .sub-menu ul li{
       width: 150px;
       margin: 10px;
       padding: 10px;
       border-bottom: 1px solid wheat;
     }
     
-    #user_logo:hover .sub-menu ul li:last-child{
+    #theater:hover .sub-menu ul li:last-child{
       border-bottom: none;
     }
-    #user_logo:hover .sub-menu ul li :first-child{
+    #theater:hover .sub-menu ul li :first-child{
       margin-top: 0;
     }
-    #user_logo:hover .sub-menu ul li a:hover{
+    #theater:hover .sub-menu ul li a:hover{
       color: wheat;
     }
-
-    /* hamburger */
-
-    .home{
-      background: rgba(106, 112, 128, 0.7);
-      padding: 5px 8px 5px 8px;
+  
+    /* Movie */
+  
+  
+  .sub-menu{
+    display: none;
+    background-color: rgba(31, 37, 51,0.7);
     }
     
-    
-    /* footer */
-
-    .footer{
-      background-color: #212839;
+    #Movie:hover .sub-menu{
+      display: block;
       position: absolute;
-      /* top: 204em; */
-      /* border: 2px solid red; */
-      width: 100%;
-      height: 20vh;
-      /* background-color: rgba(31, 37, 51,0.5); */
-      display: flex;
-      flex-direction: column;
-      font-family: 'Roboto', sans-serif;
+      list-style: none;
+      /* margin-top: 15px; */
+      margin-left: -15px;
+      z-index: 1;
     }
-
-/* .upcoming-movies{
-  border: 2px solid red;
-  margin: 1em 1em;
-
-} */
-.movies-by-lang{
-  /* border: 2px solid red; */
-  margin: 1em 1em;
-  color: aliceblue;
-}
-
-.movie-reviews{
-  /* border: 2px solid red; */
-  margin: 1em 1em;
-  position: absolute;
-  bottom: 10px;
-  width: 98%;
-  color: aliceblue;
-}
-
-.logo1 img{
-position: relative;
-left: 50%;
-top: 1em;
-/* border: 2px solid red; */
-width: 3em;
-border-radius: 30px;
-}
-
-.social_sites{
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* border: 2px solid red; */
-  position: relative;
-  left: 33%;
-  height: 8em;
-  font-family: 'Roboto', sans-serif;
-
-}
-
-.social-media img{
-  /* border: 2px solid red; */
-  width: 2em;
-  position: relative;
-  left: 55%;
-  top: 0.8em;
-bottom: 1em;
-padding: 0.6em;
-border-radius: 20px;
-}
-
-.contact a{
-  /* display: flex;
-  flex-direction: column; */
-  /* border: 2px solid red; */
-  font-size: 15px;
-  width: 3em;
-  position: relative;
-  left: 35%;
-  top: 1em;
-padding: 0.5em;
-text-decoration: none;
-color: aliceblue;
-}
-
-.contact a:hover{
-  color: wheat;
-}
-
-.social-media img:hover{
-  width: 2.2em;
-  cursor: pointer;
-}
-
-@media (min-width:0px) and (max-width:650px){
-  .social-media img{
-    width: 1em;
-  }
-  .logo1 img{
-    width: 1em;
-  }
-  .contact a{
-    font-size: 10px;
-  }
-}
-
+    
+    #Movie:hover .sub-menu ul{
+    list-style: none;
+    display: block;
+    }
+    
+    #Movie:hover .sub-menu ul li{
+      width: 150px;
+      margin: 10px;
+      padding: 10px;
+      border-bottom: 1px solid wheat;
+    }
+    
+    #Movie:hover .sub-menu ul li:last-child{
+      border-bottom: none;
+    }
+    #Movie:hover .sub-menu ul li :first-child{
+      margin-top: 0;
+    }
+    #Movie:hover .sub-menu ul li a:hover{
+      color: wheat;
+    }
+  
+    /* User-logo */
+  
+    .sub-menu{
+      display: none;
+      background-color: rgba(31, 37, 51,0.7);
+      }
+      
+      #user_logo:hover .sub-menu{
+        display: block;
+        position: absolute;
+        list-style: none;
+        /* margin-top: 15px; */
+        /* width: 80px; */
+        margin-left: -125px;
+        z-index: 1;
+      }
+      
+      #user_logo:hover .sub-menu ul{
+      list-style: none;
+      display: block;
+      }
+      
+      #user_logo:hover .sub-menu ul li{
+        width: 150px;
+        margin: 10px;
+        padding: 10px;
+        border-bottom: 1px solid wheat;
+      }
+      
+      #user_logo:hover .sub-menu ul li:last-child{
+        border-bottom: none;
+      }
+      #user_logo:hover .sub-menu ul li :first-child{
+        margin-top: 0;
+      }
+      #user_logo:hover .sub-menu ul li a:hover{
+        color: wheat;
+      }
+  
+      /* hamburger */
+  
+      .home{
+        background: rgba(106, 112, 128, 0.7);
+        padding: 5px 8px 5px 8px;
+      }
+     #hamburger_after_login{
+        display: none;
+     }
+/* -------------------------------------- navbar 4 end ---------------------------------------------- */
