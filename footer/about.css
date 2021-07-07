@@ -471,6 +471,18 @@ top: 15px;
     display: block;
   }
 }
+@media screen and (max-width:927px){
+  .column{
+    width: 80%;
+    display: block;
+  }
+  .open h1{
+    font-size: 90px;
+  }
+  .open h3{
+    font-size: 70px;
+  }
+}
 
 /* Add some shadows to create a card effect */
 .card {
