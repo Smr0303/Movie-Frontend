@@ -150,9 +150,10 @@ function show_movie(id)
     
     const searchbutton=document.querySelector(".fa");
     searchbutton.addEventListener("click",()=>{
-          var value=document.querySelector(".search input").value;
+          var value=document.querySelector(".search input").value.toLowerCase();
+          let search=document.querySelector(".search input");
         if(value===""){
-            alert("no title entered");
+            search.style.borderColor="red";
 }
 else{
     fetch(`https://api.themoviedb.org/3/list/7100885?api_key=65bdc6e47dd2725b55a936c4b0242e7b&language=en-US`)
@@ -160,11 +161,12 @@ else{
         return res.json();
     }).then((data)=>{
         for(let x=0;x<data.items.length;x++){
-            let i=data.items[x].title;
+            let i=data.items[x].title.toLowerCase();
          if(i.includes(value)){
             location.href = `./movies/index.html?id=${data.items[x].id}`
             }
-        }})
+        }
+    })
 }
     });
     
