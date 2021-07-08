@@ -65,6 +65,7 @@ width: 100%;
 .search{
   display:flex;
   width: 50%;
+  align-items: center;
   /* margin-left: 200px; */
 
 }
@@ -79,7 +80,13 @@ width: 100%;
 }
 .fa{
  cursor:pointer; 
+ /* font-size:40px; */
+ filter: invert(1);
+ /* border: 2px solid red; */
+ width: 21px;
+ margin-left: 3px;
 }
+
 .right{
   width: 40%;
   /* border: 2px solid yellow; */

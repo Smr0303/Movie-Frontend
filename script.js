@@ -85,7 +85,7 @@ function show_arrow(n)
 {
 let i=0,j=0;
 let search = document.querySelector(".search").children[0];
-let str = ["Movies...","Shows...","Sports..."]
+let str = ["Cruella...","Wrath of Man...","Army of The Dead..."]
 setInterval(() => {
     search.placeholder = str[j].slice(0,i);
     i=(i+1)%(str[j].length+1);
@@ -147,7 +147,7 @@ function show_movie(id)
     }
     // ---------------------------------------- navbar 3 end ------------------------------------------------
     
-    
+// --------------------------------------------- navbar 4 -----------------------------------------------
     const searchbutton=document.querySelector(".fa");
     searchbutton.addEventListener("click",()=>{
           var value=document.querySelector(".search input").value.toLowerCase();
@@ -169,4 +169,4 @@ else{
     })
 }
     });
-    
+// --------------------------------------- navbar 4 end -------------------------------------------------

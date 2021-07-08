@@ -1,0 +1,172 @@
+*{
+    margin : 0px;
+    padding : 0px
+}
+body{
+    /* height: 100vh; */
+    min-height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    /* flex-direction: column; */
+    background-color: #131a1f;
+    background: url(https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGJsdWUlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60) no-repeat center/cover;
+}
+.container::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #525252;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;
+}
+.container{
+    position: relative;
+    margin-top: 70px;
+    border: 2px solid #7c7676;
+    width: 600px;
+    /* height: 500px; */
+}
+.user_logo::before{
+    top: 0px;
+    left: 0px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #212124;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;
+}
+.user_logo{
+    position: relative;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    /* background-color: #202025; */
+}
+.user_logo img{
+    width: 150px;
+}
+.details{
+    /* height: 200px; */
+    /* border: 2px solid yellow; */
+}
+.row{
+    /* margin-top: 7px; */
+    padding: 15px;
+    border-bottom: 2px solid #464444;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+}
+.category{
+    width: 80px;
+    /* border: 2px solid brown; */
+    padding: 5px;
+    display:flex;
+    align-items: center;
+}
+.value{
+    width: 200px;
+    border: 2px solid #605d5d;
+    border-radius: 5px;
+    /* margin-left: 30px; */
+    padding: 5px;
+    text-align: center;
+}
+.value:hover{
+    cursor: not-allowed;
+}
+.change_password{
+    /* height: 200px; */
+    /* border: 2px solid blue; */
+}
+.heading{
+    /* border: 2px solid brown; */
+    text-align: center;
+    padding: 10px;
+}
+.heading h1{
+    color: #8f8f8f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+}
+.password_row{
+    /* margin-top: 7px; */
+    padding: 15px;
+    border-bottom: 2px solid #464444;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+}
+.password_category{
+    width: 120px;
+    /* border: 2px solid brown; */
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.password_value{
+    /* width: 200px; */
+    border: 2px solid #605d5d;
+    border-radius: 5px;
+    /* margin-left: 30px; */
+    /* padding: 5px; */
+    /* text-align: center; */
+    background-color: transparent;
+    color: white;
+    padding-left: 5px;
+}
+.submit{
+    /* border: 2px solid brown; */
+    text-align: center;
+    padding: 10px;
+}
+.submit button{
+width: 100px;
+height: 25px;
+border-radius: 5px;
+background-color: #b4b4b4;
+}
+.warning{
+    background-color: #4b4545;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+.warning h1{
+    font-size: 18px;
+    color: #c9b1b1;
+    font-family: 'Poppins', sans-serif;
+}
+.no_entry{
+    border: 2px solid #933030;
+}
+
+@media (min-width:0px) and (max-width: 700px)
+{
+    .container{
+        width: 90vw;
+    }
+
+}
+@media (min-width:0px) and (max-width: 370px)
+{
+    .category{
+        font-size: 12px;
+        width: 50px;
+    }
+    .password_category{
+       font-size: 12px;
+    }
+}
+@media (min-width:0px) and (max-width: 500px)
+{
+.warning h1{
+    font-size: 12px;
+}
+}
