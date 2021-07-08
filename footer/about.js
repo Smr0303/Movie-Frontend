@@ -63,7 +63,7 @@ data[6].addEventListener("change",(event)=>{
   email=event.target.value;
 });
 button.addEventListener("click",()=>{
-  if(reason===""||Name===""||region===""||number===""||email===""){
+  if(reason==""||Name==""||region==""||number==""||email==""){
     alert("Form is not completely filled");
     return;
   }
@@ -77,7 +77,7 @@ button.addEventListener("click",()=>{
     email,
   }
 
-  fetch(serverURl,{
+  fetch(`${url}/user/contactUs`,{
     method:"POST",
     body:JSON.stringify(Obj),
     headers:{
@@ -86,8 +86,8 @@ button.addEventListener("click",()=>{
 }).then((res)=>{
   return res.json();
 }).then((data)=>{
-  if(status!=0200){
-    alert(data.error);
+  if(status!=200){
+    alert(data.message);
   }
   else{
     alert("Thanks for your feedback");
