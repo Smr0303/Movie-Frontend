@@ -38,3 +38,62 @@ if (token) {
         }
     })
 }
+
+const data=document.querySelectorAll('input');
+const button=document.querySelector('.button');
+let reason,Name,number,region,organisation,email;
+
+data[1].addEventListener("change",(event)=>{
+  reason=event.target.value;
+});
+
+data[2].addEventListener("change",(event)=>{
+  Name=event.target.value;
+});
+data[3].addEventListener("change",(event)=>{
+  organisation=event.target.value;
+});
+data[4].addEventListener("change",(event)=>{
+  region=event.target.value;
+});
+data[5].addEventListener("change",(event)=>{
+  number=event.target.value;
+});
+data[6].addEventListener("change",(event)=>{
+  email=event.target.value;
+});
+button.addEventListener("click",()=>{
+  if(reason===""||Name===""||region===""||number===""||email===""){
+    alert("Form is not completely filled");
+    return;
+  }
+
+  Obj={
+    reason,
+    Name,
+    organisation,
+    region,
+    number,
+    email,
+  }
+
+  fetch(serverURl,{
+    method:"POST",
+    body:JSON.stringify(Obj),
+    headers:{
+      "Content-type":"application/json",
+    },
+}).then((res)=>{
+  return res.json();
+}).then((data)=>{
+  if(status!=0200){
+    alert(data.error);
+  }
+  else{
+    alert("Thanks for your feedback");
+}
+}).catch((err)=>{
+  alert("Error please retry");
+})
+
+});
