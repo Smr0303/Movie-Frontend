@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 let order_id = urlParams.get("id");
-const url = 'http://localhost:3000';
+const url = 'https://kinoticket.herokuapp.com';
 const token = localStorage.getItem("jwt");
 // let order_id = 'order_HUOdcOfP83sne0';
 

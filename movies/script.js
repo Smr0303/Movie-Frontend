@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000';
+const url = 'https://kinoticket.herokuapp.com';
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 let status = 1;

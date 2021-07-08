@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000';
+const url = 'https://kinoticket.herokuapp.com';
 const token = localStorage.getItem("jwt");
 if (token) {
 fetch(`${url}/verify_login`, {

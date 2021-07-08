@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000';
+const url = 'https://kinoticket.herokuapp.com';
 const urlParams = new URLSearchParams(window.location.search);
 // console.log(urlParams)
 const token = localStorage.getItem("jwt");

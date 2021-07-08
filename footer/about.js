@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000';
+const url = 'https://kinoticket.herokuapp.com';
 const body=document.querySelector("body");
 window.addEventListener('load',()=>{
 body.classList.add("visible");

@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000';
+const url = 'https://kinoticket.herokuapp.com';
 let Name = document.querySelector(".form_input").children[0];
 let Email = document.querySelector(".form_input").children[1];
 let Contact = document.querySelector(".form_input").children[2];
