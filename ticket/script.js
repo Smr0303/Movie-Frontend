@@ -65,7 +65,7 @@ let ticket_container = document.createElement("div");
 ticket_container.classList.add("ticket_container");
 ticket_container.innerHTML = `
 <div class="movie_image">
-<img src="https://image.tmdb.org/t/p/w200${movie_data.poster_path}" alt="">
+<img src="https://image.tmdb.org/t/p/w500${movie_data.poster_path}" alt="">
 <div class="extra">
 <img src="https://image.tmdb.org/t/p/w200${movie_data.production_companies[0].logo_path}" alt="">
 </div>

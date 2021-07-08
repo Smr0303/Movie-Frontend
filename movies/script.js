@@ -64,7 +64,7 @@ https://api.themoviedb.org/3/movie/${id}?api_key=65bdc6e47dd2725b55a936c4b0242e7
         container.innerHTML = `
         <div class="container1250">
         <div class="movie_img">
-            <img src="https://image.tmdb.org/t/p/w200${data.poster_path}" alt="">
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="">
         <div class="extra">
             <img src="https://image.tmdb.org/t/p/w200${data.production_companies[0].logo_path}" alt="">
         </div>
