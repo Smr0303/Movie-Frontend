@@ -19,116 +19,126 @@ body{
 }
 /* --------------------------------------- navbar 1 -------------------------------------------------- */
 .navbar{
-    width: 100%;
-    /* height: 70px; */
-    padding-top: 10px;
-    padding-bottom: 10px;
-    /* border: 2px solid red; */
-    background-color: rgb(31, 37, 51);
-    display: flex;
-  }
-  .left{
-    width: 60%;
-    /* border: 2px solid red; */
-    display: flex;
-    align-items: center;
-  }
-  .website_name{
-    display:flex;
-    color: #c9c1f0;
-    margin-left: 14px;
-  }
-  .logo{
-    /* border: 2px solid green; */
-    width: 40px;
-    display: flex;
-    align-items: center;
-  }
-  .logo .image{
   width: 100%;
-   
-   }
-  .head {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-   .head h2{
-    /* right:0px; */
-    font-family: 'Passion One', cursive;
-    /* margin-top: 0px; */
-    font-size: 40px;
-    color:rgb(252, 107, 23);
-    margin-left: 4px;
-  }
-   .head h1{
-     margin-left: 2px;
-     font-family: 'Passion One', cursive;
-     margin-top: 9px;
-     color: #f3c13b;
-     font-size: 23px;
-  }
-  
-  .search{
-    display:flex;
-    width: 50%;
-    /* margin-left: 200px; */
-  
-  }
-  .search input{
-    width: 100%;
-    padding: 7px;
-    /* box-sizing: border-box; */
-    border-radius: 6px;
-    margin-left: 10px;
-    background-color: rgba(255,255,255,0.8);
-    /* background-color: #dce4e1; */
-  }
-  .right{
-    width: 40%;
-    /* border: 2px solid yellow; */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .right a{
-   text-decoration: none;
-     color: #ffffff;
-   ;
-   margin-right: 40px;
-   font-family: 'Open Sans', sans-serif;
-   font-size: 17px;
-  }
-  .slider_parent{
-    margin-top: 20px;
-    margin-bottom: 20px;
+  /* height: 70px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* border: 2px solid red; */
+  background-color: rgb(31, 37, 51);
   display: flex;
+}
+.left{
+  width: 60%;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+}
+.website_name{
+  display:flex;
+  color: #c9c1f0;
+  margin-left: 14px;
+}
+.logo{
+  /* border: 2px solid green; */
+  width: 40px;
+  display: flex;
+  align-items: center;
+}
+.logo .image{
+width: 100%;
+ 
+ }
+.head {
+  display:flex;
   justify-content: center;
-  /* background-color: rgb(255, 255, 255,0.2); */
-  }
-  .hamburger{
-    display: none;
-    width: 20%;
-    /* border: 2px solid brown; */
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .hamburger img{
-    margin-right: 15px;
-    width: 30px;
-    height: 30px;
-  }
-  /* #signin_link{
-    
-  } */
-  #user_logo{
-    display: none;
-  }
-  #user_logo_img{
-    margin-top: 5px;
-    width: 33px;
-  }
-  /* -----------------------------navbar 1 end ------------------------------------------------------- */
+  align-items: center;
+}
+ .head h2{
+  /* right:0px; */
+  font-family: 'Passion One', cursive;
+  /* margin-top: 0px; */
+  font-size: 40px;
+  color:rgb(252, 107, 23);
+  margin-left: 4px;
+}
+ .head h1{
+   margin-left: 2px;
+   font-family: 'Passion One', cursive;
+   margin-top: 9px;
+   color: #f3c13b;
+   font-size: 23px;
+}
+
+.search{
+  display:flex;
+  width: 50%;
+  align-items: center;
+  /* margin-left: 200px; */
+
+}
+.search input{
+  width: 100%;
+  padding: 7px;
+  /* box-sizing: border-box; */
+  border-radius: 6px;
+  margin-left: 10px;
+  background-color: rgba(255,255,255,0.8);
+  /* background-color: #dce4e1; */
+}
+.fa{
+ cursor:pointer; 
+ /* font-size:40px; */
+ filter: invert(1);
+ /* border: 2px solid red; */
+ width: 21px;
+ margin-left: 3px;
+}
+
+.right{
+  width: 40%;
+  /* border: 2px solid yellow; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.right a{
+ text-decoration: none;
+   color: #ffffff;
+ ;
+ margin-right: 40px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 17px;
+}
+.slider_parent{
+  margin-top: 20px;
+  margin-bottom: 20px;
+display: flex;
+justify-content: center;
+/* background-color: rgb(255, 255, 255,0.2); */
+}
+.hamburger{
+  display: none;
+  width: 20%;
+  /* border: 2px solid brown; */
+  justify-content: flex-end;
+  align-items: center;
+}
+.hamburger img{
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+}
+/* #signin_link{
+  
+} */
+#user_logo{
+  display: none;
+}
+#user_logo_img{
+  margin-top: 5px;
+  width: 33px;
+}
+/* -----------------------------navbar 1 end ------------------------------------------------------- */
 .container::before{
     content: "";
     height: 100%;

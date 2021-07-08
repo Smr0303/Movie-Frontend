@@ -81,11 +81,11 @@ Password_value = event.target.value;
     })
  })
 
-  // ----------------------------------------- navbar 2 ------------------------------------------------
+// ----------------------------------------- navbar 2 ------------------------------------------------
 {
     let i=0,j=0;
     let search = document.querySelector(".search").children[0];
-    let str = ["Movies...","Shows...","Sports..."]
+    let str = ["Cruella...","Wrath of Man...","Army of The Dead..."]
     setInterval(() => {
         search.placeholder = str[j].slice(0,i);
         i=(i+1)%(str[j].length+1);
@@ -94,3 +94,26 @@ Password_value = event.target.value;
     }, 200);
     }
 // ---------------------------------------- navbar 2 end ----------------------------------------------
+// --------------------------------------------- navbar 4 -----------------------------------------------
+const searchbutton=document.querySelector(".fa");
+searchbutton.addEventListener("click",()=>{
+      var value=document.querySelector(".search input").value.toLowerCase();
+      let search=document.querySelector(".search input");
+    if(value===""){
+        search.style.borderColor="red";
+}
+else{
+fetch(`https://api.themoviedb.org/3/list/7100885?api_key=65bdc6e47dd2725b55a936c4b0242e7b&language=en-US`)
+.then((res)=>{
+    return res.json();
+}).then((data)=>{
+    for(let x=0;x<data.items.length;x++){
+        let i=data.items[x].title.toLowerCase();
+     if(i.includes(value)){
+        location.href = `../movies/index.html?id=${data.items[x].id}`
+        }
+    }
+})
+}
+});
+// --------------------------------------- navbar 4 end -------------------------------------------------
