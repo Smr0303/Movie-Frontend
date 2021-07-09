@@ -1,13 +1,13 @@
 # Movie-Frontend
 # Actually.js
---- Our project is a movie ticket booking website. It has sections of Home, Signin/Signup, My Profile, My bookings, etc. We have tmdb API for movie database and Razorpay Gateway for payment, which is in test mode. Further these sections will be described in the later part of this README file. ---
+Our project is a movie ticket booking website. It has sections of Home, Signin/Signup, My Profile, My bookings, etc. We have used Tmdb API for movie database and Razorpay Gateway for payment, which is in test mode. Further these sections will be described in the later part of this README file.
 
 # Hosted URL 
 [Kinoticket.com](https://kinoticket.netlify.app)
 
 # Features Implemented
 ## Frontend
---- Starting off with the **HOME** page, it begins with:
+Starting off with the **HOME** page, it begins with:
 1. Navigation Bar
    1. Website name and Logo
    2. Search bar
@@ -40,11 +40,11 @@ Other than these we have pages to select:
 2. Choice of seats 
 3. A page consisting of the button to book the movies, its overview, trailer video and cast can be reached by clicking on the cards in the container of home page.
 4. After selection of seats displays a page with the summary of your booking as well as the amount to be paid. It also has a pay now button which directs you to the payment gateway through razorpay API.
-5. On payment a page with the baooking summary is displayed which also gives you an option to print the ticket. ---
+5. On payment a page with the booking summary is displayed which also gives you an option to print the ticket. 
 
 
 ## Backend
---- **(1) Authentication Routes**
+**(1) Authentication Routes**
  
 These routes are for user registration and verification. New user's data is fetched from frontend after checking that all entries are in proper format and then user's data and hashed password is stored in the database.
 
@@ -68,7 +68,7 @@ These routes contain the following functions :
 
 **(4) User Routes**
 
-These routes are specially for handling user data. These are used for my profile and my bookings section mentioned in the frontend.   ---
+These routes are specially for handling user data. These are used for my profile and my bookings section mentioned in the frontend.
 
 
 <h3 align="left">Technologies and Libraries used</h3>
@@ -105,4 +105,6 @@ These routes are specially for handling user data. These are used for my profile
 1. Harsh Mishra (2020IMT-036)
 2. Samarjeet Mohite (2020IMT-084)
 3. Khushi Soni (2020IMT-045)
+
+To access backend repository click on [Movie-Backend](https://github.com/Smr0303/Movie-Backend.git).
 
