@@ -638,7 +638,6 @@ display: flex;
       /* hamburger */
   
       .home{
-        background: rgba(106, 112, 128, 0.7);
         padding: 5px 8px 5px 8px;
       }
      #hamburger_after_login{
