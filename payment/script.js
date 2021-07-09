@@ -52,16 +52,16 @@ fetch(`${url}/booking/show_pay`,{
     return res.json()
 }).then((data) => {
     let date = new Date;
-    // if(date.getTime() > Number(data[0].max_time)-10000)
-    // {
-    // alert('Times Up :)');
-    // location.href = `../index.html`;
-    // }
-    // if(data[0].status !=null)
-    // {
-    // alert('Order Session Expired :)');
-    // location.href = `../index.html`;
-    // }
+    if(date.getTime() > Number(data[0].max_time)-10000)
+    {
+    alert('Times Up :)');
+    location.href = `../index.html`;
+    }
+    if(data[0].status !=null)
+    {
+    alert('Order Session Expired :)');
+    location.href = `../index.html`;
+    }
      console.log(data)
 fetch(`
 https://api.themoviedb.org/3/movie/${data[0].movie_id}?api_key=65bdc6e47dd2725b55a936c4b0242e7b&language=en-US`).then((res) => {
@@ -178,11 +178,11 @@ rzp1.on('payment.failed', function (response){
         // alert(response.error.metadata.payment_id);
 });
 document.getElementById('rzp-button1').onclick = function(e){
-    // if(date.getTime() > Number(data[0].max_time)-10000)
-    // {
-    // alert('Times Up :)');
-    // location.href = `../index.html`;
-    // }
+    if(date.getTime() > Number(data[0].max_time)-10000)
+    {
+    alert('Times Up :)');
+    location.href = `../index.html`;
+    }
     rzp1.open();
     e.preventDefault();
 }
