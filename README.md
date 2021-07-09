@@ -83,5 +83,6 @@ These routes are specially for handling user data. These are used for my profile
 3. [Jwt](https://www.npmjs.com/package/jwt)
 4. [bcrypt](https://www.npmjs.com/package/bcrypt)
 5. [razorpay](https://www.npmjs.com/package/razorpay)
-6. 
+6. [postgres](https://www.npmjs.com/package/pg)
+7. [dotenv](https://www.npmjs.com/package/dotenv)
 
