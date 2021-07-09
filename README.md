@@ -86,3 +86,23 @@ These routes are specially for handling user data. These are used for my profile
 6. [postgres](https://www.npmjs.com/package/pg)
 7. [dotenv](https://www.npmjs.com/package/dotenv)
 
+### Local Setup
+
+1. Fork the repository.
+2. Clone the repository (```git clone URL```)
+3. Install the packages using the code given  below
+
+```npm i nodemon bcrypt cors express jsonwebtoken pg dotenv razorpay```
+
+4. Create account on razorpay then go into web integration and generate API test key and secret key.
+5. Create your own database on ElephantSQL.
+6. If you want to use Razorpay payments gateway as well generate your KEY_ID and KEY_SECRET using this link and then substitute it in the .env file.
+7. Now you can run ```npm start``` and start working localy.
+
+
+# Team Members
+
+1. Harsh Mishra (2020IMT-036)
+2. Samarjeet Mohite (2020IMT-084)
+3. Khushi Soni (2020IMT-045)
+
