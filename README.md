@@ -1,4 +1,7 @@
-# Movie-Frontend
+<img width="1440" alt="Screenshot 2021-07-09 at 11 28 41 PM" src="https://user-images.githubusercontent.com/78134776/125118688-adb3d380-e10d-11eb-8735-d5fa49a08835.png">
+
+
+
 # Actually.js
 Our project is a movie ticket booking website. It has sections of Home, Signin/Signup, My Profile, My bookings, etc. We have used Tmdb API for movie database and Razorpay Gateway for payment, which is in test mode. Further these sections will be described in the later part of this README file.
 
