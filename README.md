@@ -40,4 +40,32 @@ Other than these we have pages to select:
 2. Choice of seats 
 3. A page consisting of the button to book the movies, its overview, trailer video and cast can be reached by clicking on the cards in the container of home page.
 4. After selection of seats displays a page with the summary of your booking as well as the amount to be paid. It also has a pay now button which directs you to the payment gateway through razorpay API.
-5. On payment a page with the baooking summary is displayed which also gives you an option to print the ticket.
+5. On payment a page with the baooking summary is displayed which also gives you an option to print the ticket. ---
+
+
+## Backend
+--- **(1) Authentication Routes**
+ 
+These routes are for user registration and verification. New user's data is fetched from frontend after checking that all entries are in proper format and then user's data and hashed password is stored in the database.
+
+For existing users the email and password is comapred with priorly entered values and on successfull match A token is given to the user for session.
+
+It also has a route which resets the password on user request by taking token,old password and new password as requset parameters.
+
+**(2) Slot Routes**
+
+These routes handle all the requests regarding :
+(1) Availability of a movie on a particular date.
+(2) Slots that are vacant.
+(3) Information of booked and vacant seats.
+
+**(3) Booking Routes**
+
+These routes contain the following functions :
+(1) Blocking the selected seats for 5mins.
+(2) Creating order Id for payment.
+(3) Displaying all the order details by taking order_Id and user token as request parameters.
+
+**(4) User Routes**
+
+These routes are specially for handling user data. These are used for my profile and my bookings section mentioned in the frontend.   ---
