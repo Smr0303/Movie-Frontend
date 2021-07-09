@@ -185,7 +185,8 @@ fetch(`${url}/slots/show_available`,{
     let dd = data[i].date.slice(8,10);
 
     // console.log(Number(dd))
-    dd = Number(dd) + 1;
+    // dd = Number(dd) + 1;
+    dd = Number(dd);
 // ------------------------------------------------------------------------------------------------------
     if(Number(mm)%2==0 && dd == 31)
     {
